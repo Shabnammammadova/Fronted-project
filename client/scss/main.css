@@ -193,6 +193,21 @@ body {
   gap: 30px;
   align-self: stretch;
 }
+@media (max-width: 1280px) {
+  .discover-art {
+    padding: 80px 50px;
+  }
+}
+@media (max-width: 834px) {
+  .discover-art {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+}
 .discover-art .left-side {
   display: flex;
   flex-direction: column;
@@ -214,6 +229,18 @@ body {
   line-height: 110%;
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .discover-art .left-side h1 {
+    font-size: 38px;
+    line-height: 120%;
+    width: 330px;
+  }
+}
+@media (max-width: 834px) {
+  .discover-art .left-side h1 {
+    font-size: 28px;
+  }
+}
 .discover-art .left-side p {
   color: #FFF;
   font-family: "Work Sans";
@@ -222,6 +249,12 @@ body {
   font-weight: 400;
   line-height: 160%;
   text-transform: capitalize;
+}
+@media (max-width: 1280px) {
+  .discover-art .left-side p {
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
 .discover-art .left-side .getstart-btn {
   display: flex;
@@ -242,11 +275,27 @@ body {
   font-weight: 600;
   line-height: 140%;
 }
+@media (max-width: 1280px) {
+  .discover-art .left-side .getstart-btn {
+    padding: 0px 50px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 834px) {
+  .discover-art .left-side .getstart-btn {
+    display: none;
+  }
+}
 .discover-art .left-side .left-side-footer {
   display: flex;
   align-items: flex-start;
   gap: 30px;
   align-self: stretch;
+}
+@media (max-width: 834px) {
+  .discover-art .left-side .left-side-footer {
+    display: none;
+  }
 }
 .discover-art .left-side .left-side-footer .info {
   display: flex;
@@ -261,6 +310,12 @@ body {
   line-height: 140%;
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .discover-art .left-side .left-side-footer .info p {
+    font-size: 22px;
+    line-height: 160%;
+  }
+}
 .discover-art .left-side .left-side-footer .info span {
   color: #FFF;
   font-family: "Work Sans";
@@ -270,6 +325,12 @@ body {
   line-height: 160%;
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .discover-art .left-side .left-side-footer .info span {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
 .discover-art .right-side {
   display: flex;
   height: 510px;
@@ -277,6 +338,91 @@ body {
   align-items: center;
   flex: 1 0 0;
 }
+@media (max-width: 1280px) {
+  .discover-art .right-side {
+    height: 330px;
+  }
+}
+.discover-art .right-side .getstart-btn {
+  display: flex;
+  height: 60px;
+  padding: 0px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #A259FF;
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  display: none;
+}
+@media (max-width: 834px) {
+  .discover-art .right-side .getstart-btn {
+    display: inline;
+  }
+}
+.discover-art .right-side .getstart-btn img {
+  width: 20px;
+  height: 20px;
+}
 .discover-art .right-side img {
   height: 510px;
+}
+@media (max-width: 1280px) {
+  .discover-art .right-side img {
+    height: 330px;
+  }
+}
+.discover-art .right-side .right-side-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;
+  display: none;
+}
+@media (max-width: 834px) {
+  .discover-art .right-side .right-side-footer {
+    display: flex;
+  }
+}
+.discover-art .right-side .right-side-footer .info {
+  display: flex;
+  flex-direction: column;
+}
+.discover-art .right-side .right-side-footer .info p {
+  color: #FFF;
+  font-family: "Space Mono";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+@media (max-width: 1280px) {
+  .discover-art .right-side .right-side-footer .info p {
+    font-size: 22px;
+    line-height: 160%;
+  }
+}
+.discover-art .right-side .right-side-footer .info span {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 23.99px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: capitalize;
+}
+@media (max-width: 1280px) {
+  .discover-art .right-side .right-side-footer .info span {
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
