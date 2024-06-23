@@ -17,21 +17,21 @@
         flex-direction: column;
         justify-content: center;
         flex: 1 0 0;  
-        color: var(--White, #FFF);
+        color: $textcolor;
         font-family: "Work Sans";
         font-size: 67px;
         font-style: normal;
         font-weight: 600;
-        line-height: 110%; /* 73.7px */
+        line-height: 110%; 
         text-transform: capitalize;              
     }
     p{
-        color: var(--White, #FFF);
+        color: $textcolor;
         font-family: "Work Sans";
         font-size: 22px;
         font-style: normal;
         font-weight: 400;
-        line-height: 160%; /* 35.2px */
+        line-height: 160%; 
         text-transform: capitalize;
     }
     .getstart-btn{
@@ -44,14 +44,14 @@
         border: transparent;
         cursor: pointer;
         border-radius: 20px;
-        background: var(--Call-to-Action, #A259FF);
-        color: #FFF;
+        background: $purple;
+        color: $textcolor;
         text-align: center;
         font-family: "Work Sans";
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
-        line-height: 140%; /* 22.4px */
+        line-height: 140%;
     }
     .left-side-footer{
         display: flex;
@@ -62,7 +62,7 @@
         display: flex;
         flex-direction: column;
     p{
-            color: var(--White, #FFF);
+            color: $textcolor;
             font-family: "Space Mono";
             font-size: 28px;
             font-style: normal;
@@ -71,12 +71,12 @@
             text-transform: capitalize;
     }
     span{
-        color: var(--White, #FFF);
+        color: $textcolor;
         font-family: "Work Sans";
         font-size: 23.99px;
         font-style: normal;
         font-weight: 400;
-        line-height: 160%; /* 38.384px */
+        line-height: 160%; 
         text-transform: capitalize;
     }
     }
@@ -87,41 +87,10 @@
     height: 510px;
     flex-direction: column;
     align-items: center;
-    flex: 1 0 0;  
-.right-side-footer{
-        display: flex;
-        height: 109px;
-        padding: 20px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        flex-shrink: 0;
-        align-self: stretch;
-        border-radius: 0px 0px 20px 20px;
-        background: var(--Background---Secondary, #3B3B3B);
-        h3{
-             color: #FFF;
-             font-family: "Work Sans";
-             font-size: 22px;
-             font-style: normal;
-             font-weight: 600;
-             line-height: 140%; /* 30.8px */
-             text-transform: capitalize;
-        }
-        p{
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        span{
-             color: #FFF;
-             font-family: "Work Sans";
-             font-size: 16px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: 140%; /* 22.4px */
-        }
-        }
-
+    flex: 1 0 0; 
+    img{
+        height: 510px;
     }
+
  }
 }

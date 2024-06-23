@@ -1,0 +1,12 @@
+@mixin for-size($size){
+    @if $size == tablet {
+        @media (max-width: map-get($media, "md")) {
+          @content;
+        }
+}
+     @else if $size == phone{
+        @media (max-width: map-get($media, "sm" )){
+            @content
+        }
+        }
+}
