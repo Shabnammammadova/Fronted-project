@@ -12,7 +12,11 @@
         gap: 100px;
         @include for-size(tablet){
             width: 690px;
-        
+        }
+        @include for-size(phone){
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
         }
         .right-side{
             display: flex;
@@ -70,6 +74,9 @@
                 &:hover{
                     transform: scale(0.9);
                     transition: all 0.3s ease;
+                }
+                @include for-size(phone){
+                    display: none;
                 }
             }
         }
@@ -227,6 +234,9 @@
         &:hover{
             transform: scale(0.9);
             transition: all 0.3s ease;
+        }
+        @include for-size(phone){
+            width: 330px;
         }
     }
 }
