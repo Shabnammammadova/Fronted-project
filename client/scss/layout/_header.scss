@@ -66,6 +66,10 @@ body{
     @include for-size(tablet){
        display: none;
     }
+    &:hover{
+        transform: scale(0.9);
+        transition: all 0.3s ease;
+    }
     }
     .signup-btn{
         display: flex;
@@ -87,6 +91,10 @@ body{
         line-height: 140%; 
         @include for-size(tablet){
             display: none;
+        }
+        &:hover{
+            transform: scale(0.9);
+            transition: all 0.3s ease;
         }
     }
     .burgerimg{
