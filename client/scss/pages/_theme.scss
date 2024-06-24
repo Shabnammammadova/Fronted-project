@@ -69,6 +69,10 @@
         align-self: stretch;
         @include for-size(tablet){
             padding: 40px 50px;
+            margin-top: -80px;
+        }
+        @include for-size(phone){
+            margin-top: -50px;
         }
         .card{
             display: flex;
@@ -131,17 +135,17 @@
             
      
 }
-.card2{
-    @include for-size(phone){
-        display: none;
     }
-}
-.card3{
-    @include for-size(tablet){
-        display: none;
-    }
+    .card2{
+        @include for-size(phone){
+            display: none;
         }
     }
+    .card3{
+        @include for-size(tablet){
+            display: none;
+        }
+            }
     .trend-card-footer{
         display: flex;
         flex-direction: column;
