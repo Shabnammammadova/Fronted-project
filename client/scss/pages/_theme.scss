@@ -251,8 +251,9 @@
                     flex-shrink: 0;
                     border-radius: 20px 20px 0px 0px;
                     background: rgba(255, 255, 255, 0.10);
-                    filter: blur(7.5px) brightness(100%);
-                    -webkit-filter: blur(7.55px) brightness(100%);
+                    // filter: blur(7.5px) brightness(100%);
+                    // -webkit-filter: blur(7.55px) brightness(100%);
+                    z-index: 0;
                     @include for-size(tablet){
                         width: 150px;
                         height: 142px;
@@ -269,6 +270,8 @@
                         background-color: transparent;
                         min-width: 100px;
                         position: relative;
+                        z-index: 1;
+                        backdrop-filter: blur(5px);
                         @include for-size(tablet){
                             width: 80px;
                             height: 80px;
