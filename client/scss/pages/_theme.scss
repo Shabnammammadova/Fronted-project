@@ -2,6 +2,7 @@
     display: flex;
     padding: 80px 195px;
     flex-direction: column;
+    align-items: center;
     gap: 60px;
     @include for-size(tablet){
         gap: 40px;
@@ -85,6 +86,7 @@
                     &:hover{
                         transform: scale(0.9);
                         transition: all 0.3s ease;
+                        cursor: pointer;
                     }
             }
         }
@@ -116,6 +118,7 @@
                         &:hover{
                             transform: scale(0.9);
                             transition: all 0.3s ease;
+                            cursor: pointer;
                         }
                     
                 }
@@ -124,12 +127,14 @@
                     &:hover{
                         transform: scale(0.9);
                         transition: all 0.3s ease;
+                        cursor: pointer;
                     }
                 }
                 .img3{
                     &:hover{
                         transform: scale(0.9);
                         transition: all 0.3s ease;
+                        cursor: pointer;
                     }
                 }
             
@@ -177,4 +182,155 @@
         }
     }
 }
+}
+
+
+
+// Browser categories card
+
+
+.categories-cards{
+    display: flex;
+    padding: 80px 195px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    @include for-size(tablet){
+        padding: 40px 0px;
+        gap: 40px;
+    }
+    .top-side{
+        width: 1050px;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+        h1{
+            color: $textcolor;
+            font-family: "Work Sans";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; 
+            text-transform: capitalize;
+            text-align: left;
+            @include for-size(tablet){
+                font-size: 28px;
+            }
+        }
+    }
+    .bottom-side{
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            padding: 20px 30px 25px 30px;
+            gap: 25px;
+            @include for-size(tablet){
+                padding: 20px 20px 25px 20px;
+            }
+            @include for-size(phone){
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+            }
+            .card{
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
+                .top{
+                    display: flex;
+                    width: 240px;
+                    height: 240px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    flex-shrink: 0;
+                    border-radius: 20px 20px 0px 0px;
+                    background: rgba(255, 255, 255, 0.10);
+                    filter: blur(7.5px) brightness(100%);
+                    -webkit-filter: blur(7.55px) brightness(100%);
+                    @include for-size(tablet){
+                        width: 150px;
+                        height: 142px;
+                    }
+                    @include for-size(phone){
+                        width: 148px;
+                        height: 142px;
+                        gap: 10px;
+                    }
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        flex-shrink: 0;
+                        background-color: transparent;
+                        min-width: 100px;
+                        position: relative;
+                        @include for-size(tablet){
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
+                .bottom{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex: 1 0 0;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    background: #3B3B3B;
+                    display: flex;
+                    padding: 20px 30px 25px 30px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 25px;
+                    align-self: stretch;
+
+                    @include for-size(tablet){
+                        display: flex;
+                        padding: 20px 20px 25px 20px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 25px;
+                        align-self: stretch;
+                    }
+                    p{
+                        color: $textcolor;
+                        font-family: "Work Sans";
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%; /* 30.8px */
+                        text-transform: capitalize;
+                        @include for-size(tablet){
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .top1{
+                    background-image: url(../../../assets/images/Image\ 1.png);
+                }.top2{
+                    background-image: url(../../../assets/images/Image\ 2.png);
+                }.top3{
+                    background-image: url(../../../assets/images/Image\ 3.png);
+                }.top4{
+                    background-image: url(../../../assets/images/Image\ 4.png);
+                }.top5{
+                    background-image: url(../../../assets/images/Image\ 5.png);
+                }.top6{
+                    background-image: url(../../../assets/images/Image\ 6.png);
+                }.top7{
+                    background-image: url(../../../assets/images/Image\ 7.png);
+                }.top8{
+                    background-image: url(../../../assets/images/Image\ 8.png);
+                }
+            }
+            
+
+        }
+    }
 }

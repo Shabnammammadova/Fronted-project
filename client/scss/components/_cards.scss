@@ -105,6 +105,7 @@
             &:hover{
                 transform: scale(0.9);
                 transition: all 0.3s ease;
+                cursor: pointer;
             }
             @include for-size(tablet){
                 display: flex;

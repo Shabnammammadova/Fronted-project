@@ -1,0 +1,169 @@
+.discover-nft{
+    display: flex;
+    padding: 80px 195px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    .top-side{
+        display: flex;
+        width: 1050px;
+        align-items: center;
+        gap: 100px;
+        .right-side{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1 0 0;
+            h1{
+                color: $textcolor;
+                font-family: "Work Sans";
+                font-size: 38px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%; /* 45.6px */
+                text-transform: capitalize;
+            }
+            p{
+                color: $textcolor;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 35.2px */
+                text-transform: capitalize;
+            }
+        }
+        .left-side{
+            button{
+                padding: 0px 50px;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                border-radius: 20px;
+                border: 2px solid $purple;
+                background: transparent;
+                color:$textcolor;
+                display: flex;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 22.4px */
+                cursor: pointer;
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                }
+            }
+            display: flex;
+            height: 60px;
+
+        }
+    }
+    .bottom-side{
+        .cards{
+            display: flex;
+            width: 1050px;
+            align-items: flex-start;
+            gap: 30px;
+            .card{
+                display: flex;
+                height: 469px;
+                flex-direction: column;
+                flex: 1 0 0;
+                .card-body{
+                    display: flex;
+                    padding: 20px 30px 25px 30px;
+                    flex-direction: column;
+                    gap: 25px;
+                    align-self: stretch;
+                    background: $avatarbackground;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                
+                .card-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+                    align-self: stretch;
+                    p{
+                        color: $textcolor;
+                        font-family: "Work Sans";
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%; /* 30.8px */
+                        text-transform: capitalize;
+                    }
+                    span{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        color: $textcolor;
+                        font-family: "Space Mono";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                    }
+                }
+                .card-footer{
+                    display: flex;
+                    .left{
+                        display: flex;
+                        padding-right: 21px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                        flex: 1 0 0;
+                        p{
+                            color: $avatarnum;
+                            font-family: "Space Mono";
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 110%; /* 13.2px */
+                        }
+                        span{
+                            color: $textcolor;
+                            font-family: "Space Mono";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%; /* 22.4px */
+                        }
+                    }
+                    .right{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-end;
+                        gap: 8px;
+                        flex: 1 0 0;
+                        p{
+                            color: $avatarnum;
+                            font-family: "Space Mono";
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 110%; /* 13.2px */
+                        }
+                        span{
+                            color: $textcolor;
+                            font-family: "Space Mono";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%; /* 22.4px */
+                        }
+                    }
+                }
+            }
+            }
+        }
+    }
+}
