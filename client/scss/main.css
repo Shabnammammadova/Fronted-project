@@ -1062,11 +1062,32 @@ body {
   gap: 60px;
   align-self: stretch;
 }
+@media (max-width: 1280px) {
+  .discover-nft {
+    padding: 40px 195px 80px 195px;
+    gap: 40px;
+  }
+}
+@media (max-width: 834px) {
+  .discover-nft {
+    padding: 40px 0px 60px 0px;
+  }
+}
 .discover-nft .top-side {
   display: flex;
   width: 1050px;
   align-items: center;
   gap: 100px;
+}
+@media (max-width: 1280px) {
+  .discover-nft .top-side {
+    width: 690px;
+  }
+}
+@media (max-width: 834px) {
+  .discover-nft .top-side {
+    width: 315px;
+  }
 }
 .discover-nft .top-side .right-side {
   display: flex;
@@ -1084,6 +1105,11 @@ body {
   line-height: 120%; /* 45.6px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .discover-nft .top-side .right-side h1 {
+    font-size: 28px;
+  }
+}
 .discover-nft .top-side .right-side p {
   color: #FFF;
   font-family: "Work Sans";
@@ -1093,9 +1119,19 @@ body {
   line-height: 160%; /* 35.2px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .discover-nft .top-side .right-side p {
+    font-size: 16px;
+  }
+}
 .discover-nft .top-side .left-side {
   display: flex;
   height: 60px;
+}
+@media (max-width: 834px) {
+  .discover-nft .top-side .left-side {
+    display: none;
+  }
 }
 .discover-nft .top-side .left-side button {
   padding: 0px 50px;
@@ -1125,11 +1161,34 @@ body {
   align-items: flex-start;
   gap: 30px;
 }
+@media (max-width: 1280px) {
+  .discover-nft .bottom-side .cards {
+    width: 690px;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 834px) {
+  .discover-nft .bottom-side .cards {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+@media (max-width: 834px) {
+  .discover-nft .bottom-side .cards {
+    gap: 20px;
+  }
+}
 .discover-nft .bottom-side .cards .card {
   display: flex;
   height: 469px;
   flex-direction: column;
   flex: 1 0 0;
+}
+.discover-nft .bottom-side .cards .card:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 .discover-nft .bottom-side .cards .card .card-body {
   display: flex;
@@ -1218,4 +1277,34 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+}
+
+.seeall-btn {
+  height: 60px;
+  padding: 0px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  border: 2px solid #A259FF;
+  background: transparent;
+  color: #FFF;
+  display: flex;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  display: none;
+  cursor: pointer;
+}
+.seeall-btn:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+@media (max-width: 834px) {
+  .seeall-btn {
+    display: flex;
+  }
 }

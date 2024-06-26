@@ -5,11 +5,24 @@
     align-items: center;
     gap: 60px;
     align-self: stretch;
+    @include for-size(tablet){
+        padding: 40px 195px 80px 195px;
+        gap: 40px;
+    }
+    @include for-size(phone){
+        padding: 40px 0px 60px 0px;
+    }
     .top-side{
         display: flex;
         width: 1050px;
         align-items: center;
         gap: 100px;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
         .right-side{
             display: flex;
             flex-direction: column;
@@ -24,6 +37,9 @@
                 font-weight: 600;
                 line-height: 120%; /* 45.6px */
                 text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 28px;
+                }
             }
             p{
                 color: $textcolor;
@@ -33,9 +49,17 @@
                 font-weight: 400;
                 line-height: 160%; /* 35.2px */
                 text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
             }
         }
         .left-side{
+            display: flex;
+            height: 60px;
+            @include for-size(phone){
+                display: none;
+            }
             button{
                 padding: 0px 50px;
                 justify-content: center;
@@ -58,9 +82,6 @@
                     transition: all 0.3s ease;
                 }
             }
-            display: flex;
-            height: 60px;
-
         }
     }
     .bottom-side{
@@ -69,11 +90,28 @@
             width: 1050px;
             align-items: flex-start;
             gap: 30px;
+            @include for-size(tablet){
+                width: 690px;
+                overflow-x: scroll;
+            }
+            @include for-size(phone){
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+            }
+            @include for-size(phone){
+                gap: 20px;
+            }
             .card{
                 display: flex;
                 height: 469px;
                 flex-direction: column;
                 flex: 1 0 0;
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
                 .card-body{
                     display: flex;
                     padding: 20px 30px 25px 30px;
@@ -83,7 +121,6 @@
                     background: $avatarbackground;
                     border-bottom-left-radius: 20px;
                     border-bottom-right-radius: 20px;
-                
                 .card-info{
                     display: flex;
                     flex-direction: column;
@@ -165,5 +202,32 @@
             }
             }
         }
+    }
+}
+.seeall-btn{
+    height: 60px;
+    padding: 0px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    border: 2px solid $purple;
+    background: transparent;
+    color:$textcolor;
+    display: flex;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 22.4px */
+    display: none;
+    cursor: pointer;
+    &:hover{
+        transform: scale(0.9);
+        transition: all 0.3s ease;
+    }
+    @include for-size(phone){
+        display: flex;
     }
 }
