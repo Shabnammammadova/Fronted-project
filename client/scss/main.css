@@ -1336,6 +1336,21 @@ body {
   padding: 360px 195px 60px;
   position: relative;
 }
+@media (max-width: 1280px) {
+  .image .mashroom-background {
+    padding: 360px 195px 60px 195px;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
+  }
+}
+@media (max-width: 834px) {
+  .image .mashroom-background {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    display: flex;
+    padding: 120px 195px 40px 195px;
+  }
+}
 .image .mashroom-background .left-side {
   display: flex;
   flex-direction: column;
@@ -1375,6 +1390,12 @@ body {
   line-height: 110%; /* 56.1px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .image .mashroom-background .left-side .middle h1 {
+    font-size: 38px;
+    line-height: 120%;
+  }
+}
 .image .mashroom-background .left-side .bottom .seenft-btn {
   display: flex;
   height: 60px;
@@ -1394,7 +1415,18 @@ body {
   cursor: pointer;
   border: none;
 }
-.image .mashroom-background .right-side {
+@media (max-width: 834px) {
+  .image .mashroom-background .left-side .bottom .seenft-btn {
+    display: none;
+  }
+}
+.image .mashroom-background .right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.image .mashroom-background .right .right-side {
   display: flex;
   width: 295px;
   padding: 30px;
@@ -1408,7 +1440,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.image .mashroom-background .right-side .top p {
+.image .mashroom-background .right .right-side .top p {
   color: #FFF;
   font-family: "Space Mono";
   font-size: 12px;
@@ -1416,20 +1448,20 @@ body {
   font-weight: 400;
   line-height: 110%; /* 13.2px */
 }
-.image .mashroom-background .right-side .bottom {
+.image .mashroom-background .right .right-side .bottom {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
 }
-.image .mashroom-background .right-side .bottom .info {
+.image .mashroom-background .right .right-side .bottom .info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
   flex: 1 0 0;
 }
-.image .mashroom-background .right-side .bottom .info p {
+.image .mashroom-background .right .right-side .bottom .info p {
   color: #FFF;
   font-family: "Space Mono";
   font-size: 38px;
@@ -1438,7 +1470,7 @@ body {
   line-height: 120%; /* 45.6px */
   text-transform: capitalize;
 }
-.image .mashroom-background .right-side .bottom .info span {
+.image .mashroom-background .right .right-side .bottom .info span {
   color: #FFF;
   font-family: "Space Mono";
   font-size: 12px;
@@ -1446,7 +1478,7 @@ body {
   font-weight: 400;
   line-height: 110%; /* 13.2px */
 }
-.image .mashroom-background .right-side .bottom .text p {
+.image .mashroom-background .right .right-side .bottom .text p {
   color: var(--Text, #FFF);
   /* H4 - Space Mono */
   font-family: "Space Mono";
@@ -1455,4 +1487,30 @@ body {
   font-weight: 700;
   line-height: 140%; /* 39.2px */
   text-transform: capitalize;
+}
+.image .mashroom-background .right .bottom .seenft-btn {
+  display: flex;
+  height: 60px;
+  padding: 22px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background: #FFF;
+  color: #2B2B2B;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  display: none;
+  cursor: pointer;
+  border: none;
+}
+@media (max-width: 834px) {
+  .image .mashroom-background .right .bottom .seenft-btn {
+    display: flex;
+    width: 315px;
+  }
 }

@@ -10,6 +10,7 @@
     height: auto;
     mix-blend-mode: normal;
     position: relative;
+
 .mashroom-background{
     align-items: flex-end;
     align-self: stretch;
@@ -21,6 +22,17 @@
     mix-blend-mode: normal;
     padding: 360px 195px 60px;
     position: relative;
+    @include for-size(tablet){
+        padding: 360px 195px 60px 195px;
+        background: linear-gradient(180deg, rgba(162, 89, 255, 0.00) 0%, #A259FF 100%);
+    }
+    @include for-size(phone){
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        display: flex;
+        padding: 120px 195px 40px 195px;
+    }
     .left-side{
         display: flex;
         flex-direction: column;
@@ -59,6 +71,10 @@
                 font-weight: 600;
                 line-height: 110%; /* 56.1px */
                 text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 38px;
+                    line-height: 120%;
+                }
             }
         }
         .bottom{
@@ -79,53 +95,32 @@
                 font-weight: 600;
                 line-height: 140%; /* 22.4px */
                 cursor: pointer;
-                 border: none;
+                border: none;
+                @include for-size(phone){
+                    display: none;
+                }
             }
         }
     }
-    .right-side{
+    .right{
         display: flex;
-        width: 295px;
-        padding: 30px;
+        align-items: center;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        gap: 10px;
-        flex-shrink: 0;
-        border-radius: 20px;
-        background: rgba(59, 59, 59, 0.50);
-        backdrop-filter: blur(5px);
-        .top{
-            p{
-                color: $textcolor;
-                font-family: "Space Mono";
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 110%; /* 13.2px */
-            }
-        }
-        .bottom{
+        gap: 30px;
+        .right-side{
             display: flex;
+            width: 295px;
+            padding: 30px;
+            flex-direction: column;
+            justify-content: flex-end;
             align-items: flex-start;
             gap: 10px;
-            align-self: stretch;
-            .info{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-                flex: 1 0 0;
+            flex-shrink: 0;
+            border-radius: 20px;
+            background: rgba(59, 59, 59, 0.50);
+            backdrop-filter: blur(5px);
+            .top{
                 p{
-                    color: $textcolor;
-                    font-family: "Space Mono";
-                    font-size: 38px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 120%; /* 45.6px */
-                    text-transform: capitalize;
-                }
-                span{
                     color: $textcolor;
                     font-family: "Space Mono";
                     font-size: 12px;
@@ -134,23 +129,80 @@
                     line-height: 110%; /* 13.2px */
                 }
             }
-            .text{
-                p{
-                    color: var(--Text, #FFF);
-
-                    /* H4 - Space Mono */
-                    font-family: "Space Mono";
-                    font-size: 28px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 140%; /* 39.2px */
-                    text-transform: capitalize;
+            .bottom{
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                align-self: stretch;
+                .info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+                    flex: 1 0 0;
+                    p{
+                        color: $textcolor;
+                        font-family: "Space Mono";
+                        font-size: 38px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%; /* 45.6px */
+                        text-transform: capitalize;
+                    }
+                    span{
+                        color: $textcolor;
+                        font-family: "Space Mono";
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 110%; /* 13.2px */
+                    }
+                }
+                .text{
+                    p{
+                        color: var(--Text, #FFF);
+    
+                        /* H4 - Space Mono */
+                        font-family: "Space Mono";
+                        font-size: 28px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 140%; /* 39.2px */
+                        text-transform: capitalize;
+                    }
+                }
+    
+            }
+    
+    
+        }
+        .bottom{
+            .seenft-btn{
+                display: flex;
+                height: 60px;
+                padding: 22px 50px;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                border-radius: 20px;
+                background: $textcolor;
+                color: $backgroundcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 22.4px */
+                display: none;
+                cursor: pointer;
+                border: none;
+                @include for-size(phone){
+                    display: flex;
+                    width: 315px;
                 }
             }
-
         }
-
-
     }
+ 
 }
 }
