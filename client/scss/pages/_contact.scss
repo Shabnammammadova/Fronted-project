@@ -278,6 +278,16 @@
         display: flex;
         align-items: flex-start;
         gap: 30px;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            display: flex;
+            width: 315px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
         .card{
             display: flex;
             width: 330px;
@@ -288,15 +298,45 @@
             gap: 20px;
             border-radius: 20px;
             background: $avatarbackground;
-            // .card-header{
-
-            // }
+            @include for-size(tablet){
+                width: 210px;
+                height: 370px;
+                padding: 10px 20px 30px 20px;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+            @include for-size(phone){
+                display: flex;
+                flex-direction: row;
+                width: 315px;
+                height: 157px;
+                padding: 20px;
+                justify-content: space-between;
+                align-items: center;
+                align-self: stretch;
+            }
+            .card-header{
+                img{
+                    @include for-size(tablet){
+                        width: 205px;
+                        height: 205px;
+                    }
+                    @include for-size(phone){
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
             .card-info{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
                 align-self: stretch;
+                @include for-size(phone){
+                    width: 155px;
+                    align-items: flex-start;
+                }
                 h3{
                     color: $textcolor;
                     text-align: center;
@@ -306,6 +346,13 @@
                     font-weight: 600;
                     line-height: 140%; /* 30.8px */
                     text-transform: capitalize;
+                    @include for-size(tablet){
+                        font-size: 16px;
+                    }
+                    @include for-size(phone){
+                        text-align: left;
+                        align-items: flex-start;
+                    }
                 }
                 p{
                     color: $textcolor;
@@ -314,7 +361,13 @@
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height: 140%; /* 22.4px */ 
+                    line-height: 140%; /* 22.4px */
+                    @include for-size(tablet) {
+                        font-size: 12px;
+                    }
+                    @include for-size(phone){
+                        text-align: left;
+                    }
                 }
             }
         }

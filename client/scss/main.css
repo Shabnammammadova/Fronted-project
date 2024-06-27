@@ -1597,6 +1597,20 @@ body {
   align-items: flex-start;
   gap: 30px;
 }
+@media (max-width: 1280px) {
+  .works-section .bottom {
+    width: 690px;
+  }
+}
+@media (max-width: 834px) {
+  .works-section .bottom {
+    display: flex;
+    width: 315px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
 .works-section .bottom .card {
   display: flex;
   width: 330px;
@@ -1608,12 +1622,51 @@ body {
   border-radius: 20px;
   background: #3B3B3B;
 }
+@media (max-width: 1280px) {
+  .works-section .bottom .card {
+    width: 210px;
+    height: 370px;
+    padding: 10px 20px 30px 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+}
+@media (max-width: 834px) {
+  .works-section .bottom .card {
+    display: flex;
+    flex-direction: row;
+    width: 315px;
+    height: 157px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+}
+@media (max-width: 1280px) {
+  .works-section .bottom .card .card-header img {
+    width: 205px;
+    height: 205px;
+  }
+}
+@media (max-width: 834px) {
+  .works-section .bottom .card .card-header img {
+    width: 100px;
+    height: 100px;
+  }
+}
 .works-section .bottom .card .card-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   align-self: stretch;
+}
+@media (max-width: 834px) {
+  .works-section .bottom .card .card-info {
+    width: 155px;
+    align-items: flex-start;
+  }
 }
 .works-section .bottom .card .card-info h3 {
   color: #FFF;
@@ -1625,6 +1678,17 @@ body {
   line-height: 140%; /* 30.8px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .works-section .bottom .card .card-info h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 834px) {
+  .works-section .bottom .card .card-info h3 {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
 .works-section .bottom .card .card-info p {
   color: #FFF;
   text-align: center;
@@ -1633,4 +1697,14 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+}
+@media (max-width: 1280px) {
+  .works-section .bottom .card .card-info p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 834px) {
+  .works-section .bottom .card .card-info p {
+    text-align: left;
+  }
 }
