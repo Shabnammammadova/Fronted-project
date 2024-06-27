@@ -20,7 +20,7 @@
     height: auto;
     justify-content: center;
     mix-blend-mode: normal;
-    padding: 360px 195px 60px;
+    padding: 360px 195px 60px 195px;
     position: relative;
     @include for-size(tablet){
         padding: 360px 195px 60px 195px;
@@ -28,10 +28,10 @@
     }
     @include for-size(phone){
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 30px;
         display: flex;
-        padding: 120px 195px 40px 195px;
+        padding: 120px 195px 40px;
     }
     .left-side{
         display: flex;
@@ -109,7 +109,7 @@
         gap: 30px;
         .right-side{
             display: flex;
-            width: 295px;
+            // width: 295px;
             padding: 30px;
             flex-direction: column;
             justify-content: flex-end;
@@ -119,6 +119,20 @@
             border-radius: 20px;
             background: rgba(59, 59, 59, 0.50);
             backdrop-filter: blur(5px);
+            @include for-size(phone){
+                // width: 315px;
+                align-items: flex-start;
+                align-self: stretch;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: auto;
+                justify-content: flex-end;
+                mix-blend-mode: normal;
+                padding: 30px;
+                position: relative;
+            }
             .top{
                 p{
                     color: $textcolor;

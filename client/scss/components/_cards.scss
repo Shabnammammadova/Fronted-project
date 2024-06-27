@@ -5,13 +5,17 @@
     align-items: center;
     gap: 60px;
     align-self: stretch;
+    @include for-size(phone){
+        padding: 40px 195px;
+        gap: 40px;
+    }
     .card-header{
         display: flex;
         width: 1050px;
         align-items: flex-end;
         gap: 100px;
         @include for-size(tablet){
-            width: 690px;
+            width: fit-content;
         }
         @include for-size(phone){
             flex-direction: column;

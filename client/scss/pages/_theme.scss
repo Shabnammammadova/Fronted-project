@@ -6,7 +6,7 @@
     gap: 60px;
     @include for-size(tablet){
         gap: 40px;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
     }
     @include for-size(phone){
@@ -64,16 +64,16 @@
     }
     .cards{
         display: flex;
-        padding: 80px 195px;
         align-items: center;
+        width: 1050px;
         gap: 30px;
         align-self: stretch;
         @include for-size(tablet){
-            padding: 40px 50px;
-            margin-top: -80px;
+            width: 690px;
         }
         @include for-size(phone){
-            margin-top: -50px;
+            width: 315px;
+            margin-top: 50px;
         }
         .card{
             display: flex;
