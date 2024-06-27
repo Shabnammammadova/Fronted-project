@@ -1717,6 +1717,11 @@ body {
   gap: 10px;
   align-self: stretch;
 }
+@media (max-width: 1280px) {
+  .weekly-digest {
+    padding: 40px 0px 80px 0px;
+  }
+}
 .weekly-digest .weekly {
   display: flex;
   width: 1050px;
@@ -1727,9 +1732,36 @@ body {
   background: #3B3B3B;
   border: none;
 }
+@media (max-width: 1280px) {
+  .weekly-digest .weekly {
+    width: 690px;
+    padding: 40px 30px;
+    gap: 30px;
+  }
+}
+@media (max-width: 834px) {
+  .weekly-digest .weekly {
+    padding: 40px 0;
+    flex-direction: column;
+    background-color: #2B2B2B;
+    width: 315px;
+  }
+}
 .weekly-digest .weekly .left-side img {
   height: 310px;
   flex: 1 0 0;
+}
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .left-side img {
+    height: 280px;
+    width: 300px;
+  }
+}
+@media (max-width: 834px) {
+  .weekly-digest .weekly .left-side img {
+    width: 315px;
+    height: 255px;
+  }
 }
 .weekly-digest .weekly .right-side {
   display: flex;
@@ -1738,6 +1770,11 @@ body {
   align-items: flex-start;
   gap: 40px;
   flex-shrink: 0;
+}
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .right-side {
+    width: 300px;
+  }
 }
 .weekly-digest .weekly .right-side .top {
   display: flex;
@@ -1755,6 +1792,11 @@ body {
   line-height: 120%; /* 45.6px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .right-side .top h1 {
+    font-size: 28px;
+  }
+}
 .weekly-digest .weekly .right-side .top p {
   color: #FFF;
   font-family: "Work Sans";
@@ -1764,7 +1806,23 @@ body {
   line-height: 160%; /* 35.2px */
   text-transform: capitalize;
 }
-.weekly-digest .weekly .right-side .bottom button {
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .right-side .top p {
+    font-size: 16px;
+  }
+}
+.weekly-digest .weekly .right-side .bottom {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .right-side .bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+.weekly-digest .weekly .right-side .bottom .enter-btn {
   display: flex;
   height: 60px;
   padding: 16px 0px 16px 20px;
@@ -1773,10 +1831,16 @@ body {
   align-self: stretch;
   border-radius: 20px;
   background: #FFF;
-  border: none;
-  cursor: pointer;
+  width: 425px;
+  position: relative;
+  z-index: 0;
 }
-.weekly-digest .weekly .right-side .bottom button p {
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .right-side .bottom .enter-btn {
+    width: 300px;
+  }
+}
+.weekly-digest .weekly .right-side .bottom .enter-btn p {
   color: #2B2B2B;
   font-family: "Work Sans";
   font-size: 16px;
@@ -1784,7 +1848,32 @@ body {
   font-weight: 400;
   line-height: 140%; /* 22.4px */
 }
-.weekly-digest .weekly .right-side .bottom button span {
+.weekly-digest .weekly .right-side .bottom .letter-btn {
+  display: flex;
+  height: 60px;
+  padding: 0px 50px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background: #A259FF;
+  border: none;
+  z-index: 1;
+  position: absolute;
+  right: 295px;
+}
+@media (max-width: 1280px) {
+  .weekly-digest .weekly .right-side .bottom .letter-btn {
+    width: 300px;
+    position: relative;
+    right: 0;
+    justify-content: center;
+  }
+}
+.weekly-digest .weekly .right-side .bottom .letter-btn span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: #FFF;
   text-align: center;
   font-family: "Work Sans";
@@ -1792,13 +1881,4 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 140%; /* 22.4px */
-  display: flex;
-  height: 60px;
-  padding: 0px 50px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 12px;
-  border: #A259FF;
-  border-radius: 20px;
-  background: #A259FF;
 }
