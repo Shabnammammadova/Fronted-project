@@ -1708,3 +1708,97 @@ body {
     text-align: left;
   }
 }
+
+.weekly-digest {
+  display: flex;
+  padding: 40px 195px 80px 195px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+.weekly-digest .weekly {
+  display: flex;
+  width: 1050px;
+  padding: 60px;
+  align-items: center;
+  gap: 80px;
+  border-radius: 20px;
+  background: #3B3B3B;
+  border: none;
+}
+.weekly-digest .weekly .left-side img {
+  height: 310px;
+  flex: 1 0 0;
+}
+.weekly-digest .weekly .right-side {
+  display: flex;
+  width: 425px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  flex-shrink: 0;
+}
+.weekly-digest .weekly .right-side .top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.weekly-digest .weekly .right-side .top h1 {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+}
+.weekly-digest .weekly .right-side .top p {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 35.2px */
+  text-transform: capitalize;
+}
+.weekly-digest .weekly .right-side .bottom button {
+  display: flex;
+  height: 60px;
+  padding: 16px 0px 16px 20px;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 20px;
+  background: #FFF;
+  border: none;
+  cursor: pointer;
+}
+.weekly-digest .weekly .right-side .bottom button p {
+  color: #2B2B2B;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.weekly-digest .weekly .right-side .bottom button span {
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  display: flex;
+  height: 60px;
+  padding: 0px 50px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  border: #A259FF;
+  border-radius: 20px;
+  background: #A259FF;
+}
