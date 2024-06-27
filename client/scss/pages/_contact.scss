@@ -220,3 +220,103 @@
  
 }
 }
+
+
+
+
+// How it works section
+
+.works-section{
+    display: flex;
+    padding: 80px 195px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    align-self: stretch;
+    @include for-size(tablet){
+        padding: 40px 195px;
+        gap: 40px;
+    }
+    .top{
+        width: 1050px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+         h1{
+            color: $textcolor;
+            font-family: "Work Sans";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 45.6px */
+            text-transform: capitalize;
+            @include for-size(tablet){
+                font-size: 28px;
+            }
+         }
+         p{
+            color: $textcolor;
+            font-family: "Work Sans";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 35.2px */
+            text-transform: capitalize;
+            @include for-size(tablet){
+                font-size: 16px;
+            }
+         }
+    }
+    .bottom{
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        .card{
+            display: flex;
+            width: 330px;
+            height: 442px;
+            padding: 10px 30px 30px 30px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            border-radius: 20px;
+            background: $avatarbackground;
+            // .card-header{
+
+            // }
+            .card-info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                align-self: stretch;
+                h3{
+                    color: $textcolor;
+                    text-align: center;
+                    font-family: "Work Sans";
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%; /* 30.8px */
+                    text-transform: capitalize;
+                }
+                p{
+                    color: $textcolor;
+                    text-align: center;
+                    font-family: "Work Sans";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 22.4px */ 
+                }
+            }
+        }
+    }
+}

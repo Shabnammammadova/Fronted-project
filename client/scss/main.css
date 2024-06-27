@@ -1532,3 +1532,105 @@ body {
     width: 315px;
   }
 }
+
+.works-section {
+  display: flex;
+  padding: 80px 195px;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  align-self: stretch;
+}
+@media (max-width: 1280px) {
+  .works-section {
+    padding: 40px 195px;
+    gap: 40px;
+  }
+}
+.works-section .top {
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+@media (max-width: 1280px) {
+  .works-section .top {
+    width: 690px;
+  }
+}
+@media (max-width: 834px) {
+  .works-section .top {
+    width: 315px;
+  }
+}
+.works-section .top h1 {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+}
+@media (max-width: 1280px) {
+  .works-section .top h1 {
+    font-size: 28px;
+  }
+}
+.works-section .top p {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 35.2px */
+  text-transform: capitalize;
+}
+@media (max-width: 1280px) {
+  .works-section .top p {
+    font-size: 16px;
+  }
+}
+.works-section .bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.works-section .bottom .card {
+  display: flex;
+  width: 330px;
+  height: 442px;
+  padding: 10px 30px 30px 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: #3B3B3B;
+}
+.works-section .bottom .card .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+.works-section .bottom .card .card-info h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+}
+.works-section .bottom .card .card-info p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
