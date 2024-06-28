@@ -31,7 +31,7 @@
         align-items: center;
         gap: 30px;
         display: flex;
-        padding: 120px 195px 40px;
+        padding: 120px 0px 40px;
     }
     .left-side{
         display: flex;
@@ -46,6 +46,7 @@
             gap: 12px;
             border-radius: 20px;
             background: $avatarbackground;
+            cursor: pointer;
             img{
                 display: flex;
                 width: 24px;
@@ -96,6 +97,10 @@
                 line-height: 140%; /* 22.4px */
                 cursor: pointer;
                 border: none;
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                }
                 @include for-size(phone){
                     display: none;
                 }
@@ -210,6 +215,10 @@
                 display: none;
                 cursor: pointer;
                 border: none;
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                }
                 @include for-size(phone){
                     display: flex;
                     width: 315px;
@@ -228,13 +237,13 @@
 
 .works-section{
     display: flex;
-    padding: 80px 195px;
+    padding: 80px 0px;
     flex-direction: column;
     align-items: center;
     gap: 48px;
     align-self: stretch;
     @include for-size(tablet){
-        padding: 40px 195px;
+        padding: 40px 0px;
         gap: 40px;
     }
     .top{
@@ -468,26 +477,34 @@
             display: flex;
             align-items: flex-start;
             position: relative;
+            width: 425px;
             @include for-size(tablet){
            flex-direction: column;
            align-items: center;
            gap: 16px;
+           width: 300px;
             }
         .enter-btn{
             display: flex;
-            height: 60px;
+            outline: none;
             padding: 16px 0px 16px 20px;
             align-items: center;
             gap: 12px;
             align-self: stretch;
             border-radius: 20px;
+            border: none;
             background:$textcolor;
             width: 425px;
             position: relative;
             z-index: 0;
-            cursor: pointer;
+            color: $backgroundcolor;
+            font-family: "Work Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 22.4px */
             @include for-size(tablet){
-                width: 315px;
+                width: 280px;
             }
             p{
                 color: $backgroundcolor;
@@ -500,7 +517,7 @@
         }
           .letter-btn{
             display: flex;
-            height: 60px;
+            height: 54.4px;
             padding: 0px 50px;
             justify-content: flex-end;
             align-items: center;
@@ -512,8 +529,12 @@
             position: absolute;
             right: 0px;
             cursor: pointer;
+            &:hover{
+                transform: scale(0.95);
+                transition: all 0.3s ease;
+            }
             @include for-size(tablet){
-                width: 315px;
+                width: 300px;
                 position: relative;
                 right: 0;
                 justify-content: center;

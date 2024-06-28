@@ -66,7 +66,7 @@ table {
 }
 
 body {
-  background-color: #2B2B2B;
+  background-color: skyblue;
 }
 
 .navbar {
@@ -800,7 +800,7 @@ body {
 
 .creator-cards {
   display: flex;
-  padding: 80px 195px;
+  padding: 80px 0px;
   flex-direction: column;
   align-items: center;
   gap: 60px;
@@ -808,7 +808,7 @@ body {
 }
 @media (max-width: 834px) {
   .creator-cards {
-    padding: 40px 195px;
+    padding: 40px 0px;
     gap: 40px;
   }
 }
@@ -1352,7 +1352,7 @@ body {
     align-items: center;
     gap: 30px;
     display: flex;
-    padding: 120px 195px 40px;
+    padding: 120px 0px 40px;
   }
 }
 .image .mashroom-background .left-side {
@@ -1369,6 +1369,7 @@ body {
   gap: 12px;
   border-radius: 20px;
   background: #3B3B3B;
+  cursor: pointer;
 }
 .image .mashroom-background .left-side .top img {
   display: flex;
@@ -1418,6 +1419,10 @@ body {
   line-height: 140%; /* 22.4px */
   cursor: pointer;
   border: none;
+}
+.image .mashroom-background .left-side .bottom .seenft-btn:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
 }
 @media (max-width: 834px) {
   .image .mashroom-background .left-side .bottom .seenft-btn {
@@ -1526,6 +1531,10 @@ body {
   cursor: pointer;
   border: none;
 }
+.image .mashroom-background .right .bottom .seenft-btn:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
 @media (max-width: 834px) {
   .image .mashroom-background .right .bottom .seenft-btn {
     display: flex;
@@ -1535,7 +1544,7 @@ body {
 
 .works-section {
   display: flex;
-  padding: 80px 195px;
+  padding: 80px 0px;
   flex-direction: column;
   align-items: center;
   gap: 48px;
@@ -1543,7 +1552,7 @@ body {
 }
 @media (max-width: 1280px) {
   .works-section {
-    padding: 40px 195px;
+    padding: 40px 0px;
     gap: 40px;
   }
 }
@@ -1815,31 +1824,39 @@ body {
   display: flex;
   align-items: flex-start;
   position: relative;
+  width: 425px;
 }
 @media (max-width: 1280px) {
   .weekly-digest .weekly .right-side .bottom {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    width: 300px;
   }
 }
 .weekly-digest .weekly .right-side .bottom .enter-btn {
   display: flex;
-  height: 60px;
+  outline: none;
   padding: 16px 0px 16px 20px;
   align-items: center;
   gap: 12px;
   align-self: stretch;
   border-radius: 20px;
+  border: none;
   background: #FFF;
   width: 425px;
   position: relative;
   z-index: 0;
-  cursor: pointer;
+  color: #2B2B2B;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
 }
 @media (max-width: 1280px) {
   .weekly-digest .weekly .right-side .bottom .enter-btn {
-    width: 315px;
+    width: 280px;
   }
 }
 .weekly-digest .weekly .right-side .bottom .enter-btn p {
@@ -1852,7 +1869,7 @@ body {
 }
 .weekly-digest .weekly .right-side .bottom .letter-btn {
   display: flex;
-  height: 60px;
+  height: 54.4px;
   padding: 0px 50px;
   justify-content: flex-end;
   align-items: center;
@@ -1865,9 +1882,13 @@ body {
   right: 0px;
   cursor: pointer;
 }
+.weekly-digest .weekly .right-side .bottom .letter-btn:hover {
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
 @media (max-width: 1280px) {
   .weekly-digest .weekly .right-side .bottom .letter-btn {
-    width: 315px;
+    width: 300px;
     position: relative;
     right: 0;
     justify-content: center;
@@ -1888,7 +1909,7 @@ body {
 
 footer {
   display: flex;
-  padding: 40px 195px;
+  padding: 40px 0px;
   flex-direction: column;
   align-items: center;
   gap: 30px;
@@ -1960,6 +1981,7 @@ footer .footer-header .left .social-media-logos {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  cursor: pointer;
 }
 footer .footer-header .middle {
   display: flex;
@@ -2066,34 +2088,28 @@ footer .footer-header .right .button {
   display: flex;
   align-items: flex-start;
   position: relative;
+  width: 425px;
 }
 @media (max-width: 834px) {
   footer .footer-header .right .button {
     flex-direction: column;
-    align-items: center;
     gap: 16px;
+    width: 300px;
   }
 }
 footer .footer-header .right .button .enter-btn {
   display: flex;
-  height: 60px;
+  outline: none;
   padding: 16px 0px 16px 20px;
   align-items: center;
   gap: 12px;
   align-self: stretch;
   border-radius: 20px;
+  border: none;
   background: #FFF;
   width: 425px;
   position: relative;
   z-index: 0;
-  cursor: pointer;
-}
-@media (max-width: 834px) {
-  footer .footer-header .right .button .enter-btn {
-    width: 315px;
-  }
-}
-footer .footer-header .right .button .enter-btn p {
   color: #2B2B2B;
   font-family: "Work Sans";
   font-size: 16px;
@@ -2101,9 +2117,14 @@ footer .footer-header .right .button .enter-btn p {
   font-weight: 400;
   line-height: 140%; /* 22.4px */
 }
+@media (max-width: 834px) {
+  footer .footer-header .right .button .enter-btn {
+    width: 280px;
+  }
+}
 footer .footer-header .right .button .letter-btn {
   display: flex;
-  height: 60px;
+  height: 54.4px;
   padding: 0px 50px;
   justify-content: flex-end;
   align-items: center;
@@ -2116,9 +2137,13 @@ footer .footer-header .right .button .letter-btn {
   right: 0px;
   cursor: pointer;
 }
+footer .footer-header .right .button .letter-btn:hover {
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
 @media (max-width: 834px) {
   footer .footer-header .right .button .letter-btn {
-    width: 315px;
+    width: 300px;
     position: relative;
     justify-content: center;
   }
