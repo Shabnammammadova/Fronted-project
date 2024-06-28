@@ -3,9 +3,28 @@
     align-items: center;
     gap: 60px;
     align-self: stretch;
+    @include for-size(tablet){
+        gap: 40px;
+    }
+    @include for-size(phone){
+        flex-direction: column;
+        justify-content: center;
+    }
     .left-side{
         flex: 1 0 0;
         align-self: stretch;
+        @include for-size(phone){
+            align-self: auto;
+        }
+        .cosmos1{
+            width: 610px;
+            height: 691px;
+            @include for-size(phone){
+                width: 375px;
+                height: 232px;
+            }
+        }
+
     }
     .right-side{
         display: flex;
@@ -14,6 +33,12 @@
         align-items: flex-start;
         gap: 40px;
         flex: 1 0 0;
+        @include for-size(phone){
+            width: 315px;
+            padding: 30px 0px 40px 0px;
+            align-items: center;
+            gap: 30px;
+        }
         .top{
             display: flex;
             flex-direction: column;
@@ -21,6 +46,9 @@
             gap: 20px;
             align-self: stretch;
             width: 460px;
+            @include for-size(tablet){
+                width: 325px;
+            }
             h1{
                 color: $textcolor;
                 font-family: "Work Sans";
@@ -29,6 +57,9 @@
                 font-weight: 600;
                 line-height: 110%; /* 56.1px */
                 text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 38px;
+                }
             }
             p{
                 color: $textcolor;
@@ -38,6 +69,9 @@
                 font-weight: 400;
                 line-height: 160%; /* 35.2px */
                 text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
             }
         }
         .bottom{
@@ -46,6 +80,12 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 30px;
+            @include for-size(tablet){
+                width: 325px;
+            }
+            @include for-size(phone){
+                width: 315px;
+            }
             .inputs{
                 display: flex;
                 flex-direction: column;

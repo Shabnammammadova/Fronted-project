@@ -2236,9 +2236,35 @@ footer .footer-line p {
   gap: 60px;
   align-self: stretch;
 }
+@media (max-width: 1280px) {
+  .login-section {
+    gap: 40px;
+  }
+}
+@media (max-width: 834px) {
+  .login-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .login-section .left-side {
   flex: 1 0 0;
   align-self: stretch;
+}
+@media (max-width: 834px) {
+  .login-section .left-side {
+    align-self: auto;
+  }
+}
+.login-section .left-side .cosmos1 {
+  width: 610px;
+  height: 691px;
+}
+@media (max-width: 834px) {
+  .login-section .left-side .cosmos1 {
+    width: 375px;
+    height: 232px;
+  }
 }
 .login-section .right-side {
   display: flex;
@@ -2248,6 +2274,14 @@ footer .footer-line p {
   gap: 40px;
   flex: 1 0 0;
 }
+@media (max-width: 834px) {
+  .login-section .right-side {
+    width: 315px;
+    padding: 30px 0px 40px 0px;
+    align-items: center;
+    gap: 30px;
+  }
+}
 .login-section .right-side .top {
   display: flex;
   flex-direction: column;
@@ -2255,6 +2289,11 @@ footer .footer-line p {
   gap: 20px;
   align-self: stretch;
   width: 460px;
+}
+@media (max-width: 1280px) {
+  .login-section .right-side .top {
+    width: 325px;
+  }
 }
 .login-section .right-side .top h1 {
   color: #FFF;
@@ -2265,6 +2304,11 @@ footer .footer-line p {
   line-height: 110%; /* 56.1px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .login-section .right-side .top h1 {
+    font-size: 38px;
+  }
+}
 .login-section .right-side .top p {
   color: #FFF;
   font-family: "Work Sans";
@@ -2274,12 +2318,27 @@ footer .footer-line p {
   line-height: 160%; /* 35.2px */
   text-transform: capitalize;
 }
+@media (max-width: 1280px) {
+  .login-section .right-side .top p {
+    font-size: 16px;
+  }
+}
 .login-section .right-side .bottom {
   display: flex;
   width: 330px;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+}
+@media (max-width: 1280px) {
+  .login-section .right-side .bottom {
+    width: 325px;
+  }
+}
+@media (max-width: 834px) {
+  .login-section .right-side .bottom {
+    width: 315px;
+  }
 }
 .login-section .right-side .bottom .inputs {
   display: flex;
