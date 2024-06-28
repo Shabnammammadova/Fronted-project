@@ -1,0 +1,112 @@
+.login-section{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    .left-side{
+        flex: 1 0 0;
+        align-self: stretch;
+    }
+    .right-side{
+        display: flex;
+        padding: 100px 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        flex: 1 0 0;
+        .top{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            align-self: stretch;
+            width: 460px;
+            h1{
+                color: $textcolor;
+                font-family: "Work Sans";
+                font-size: 51px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 110%; /* 56.1px */
+                text-transform: capitalize;
+            }
+            p{
+                color: $textcolor;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 35.2px */
+                text-transform: capitalize;
+            }
+        }
+        .bottom{
+            display: flex;
+            width: 330px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+            .inputs{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                align-self: stretch;
+                .login{
+                    display: flex;
+                    height: 46px;
+                    padding: 16px 20px;
+                    align-items: center;
+                    gap: 12px;
+                    align-self: stretch;
+                    border-radius: 20px;
+                    border: 1px solid $avatarnum;
+                    background: $textcolor;
+                    input{
+                        display: flex;
+                        // padding: 16px 20px;
+                        align-items: center;
+                        gap: 12px;
+                        align-self: stretch;
+                        border-radius: 20px;
+                        border: 1px solid $avatarnum;
+                        background: $textcolor;
+                        outline: none;
+                        border: none;
+                        color:$backgroundcolor;
+                        font-family: "Work Sans";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                    }
+                }
+
+            }
+            .create-btn{
+                display: flex;
+                height: 46px;
+                padding: 0px 50px;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                align-self: stretch;
+                border: none;
+                cursor: pointer;
+                border-radius: 20px;
+                background: $purple;
+                color: $textcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 22.4px */
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}

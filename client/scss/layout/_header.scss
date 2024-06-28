@@ -20,6 +20,7 @@ body{
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
     @include for-size(tablet){
         gap: 9px;
     }
@@ -70,6 +71,32 @@ body{
         transform: scale(0.9);
         transition: all 0.3s ease;
     }
+    }
+    .login-btn{
+        display: flex;
+        height: 60px;
+        padding: 0px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border-radius: 20px;
+        border: transparent;
+        cursor: pointer;
+        background: $purple;
+        color: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        @include for-size(tablet){
+            display: none;
+        }
+        &:hover{
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+        }
     }
     .signup-btn{
         display: flex;
