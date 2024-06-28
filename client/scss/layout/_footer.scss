@@ -1,0 +1,259 @@
+footer{
+    display: flex;
+    padding: 40px 195px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+    background: $avatarbackground;
+    .footer-header{
+        display: flex;
+        @include for-size(tablet){
+            flex-direction: column;
+            width: 690px;
+            gap: 30px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+    .left{
+        display: flex;
+        width: 327.414px;
+        padding-right: 84px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        @include for-size(tablet){
+            gap: 15px;
+            padding: 0;
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            .head{
+                color:$grey;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+            }
+            .body{
+                color: $grey;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+            }
+        }
+        .social-media-logos{
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+    }
+    .middle{
+        display: flex;
+        width: 240px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        @include for-size(tablet){
+            gap: 20px;
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+        .head{
+            color: $textcolor;
+            font-family: "Space Mono";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 35.2px */
+            text-transform: capitalize;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: $grey;
+                    font-family: "Work Sans";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 22.4px */
+                }
+            }
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        @include for-size(tablet){
+        gap: 20px;
+        }
+        .head{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+            @include for-size(tablet){
+                width: 690px;
+                gap: 20px;
+            }
+            @include for-size(phone){
+                width: 315px;
+            }
+            h1{
+                color: $textcolor;
+                font-family: "Space Mono";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%; /* 35.2px */
+                text-transform: capitalize;
+            }
+            p{
+                color: $grey;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+                width: 330px;
+                @include for-size(tablet){
+                    width: 690px;
+                }
+                @include for-size(phone){
+                    width: 315px;
+                }
+            }
+        }
+        .button{
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            @include for-size(phone){
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+        .enter-btn{
+            display: flex;
+            height: 60px;
+            padding: 16px 0px 16px 20px;
+            align-items: center;
+            gap: 12px;
+            align-self: stretch;
+            border-radius: 20px;
+            background:$textcolor;
+            width: 425px;
+            position: relative;
+            z-index: 0;
+            cursor: pointer;
+            @include for-size(phone){
+                width: 315px;
+            }
+            p{
+                color: $backgroundcolor;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+            }
+        }
+          .letter-btn{
+            display: flex;
+            height: 60px;
+            padding: 0px 50px;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 12px;
+            border-radius: 20px;
+            background: $purple;
+            border: none;
+            z-index: 1;
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+            @include for-size(phone){
+                width: 315px;
+                position: relative;
+                justify-content: center;
+            }
+            span{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color:$textcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 22.4px */
+            }
+          }
+    
+           
+        }
+    }
+}
+    .footer-line{
+        display: flex;
+        width: 1049.414px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+        span{
+            width: 1049.414px;
+            height: 1px;
+            background:$avatarnum;
+            @include for-size(tablet){
+                width: 690px;
+            }
+            @include for-size(phone){
+                width: 315px;
+            }
+        }
+        p{
+            color: $grey;
+            font-family: "Work Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; /* 13.2px */
+        }
+    }
+
+}
+
+
