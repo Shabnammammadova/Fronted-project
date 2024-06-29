@@ -2116,20 +2116,20 @@ footer .footer-header .right .head p {
     width: 315px;
   }
 }
-footer .footer-header .right .button {
+footer .footer-header .right .bottom {
   display: flex;
   align-items: flex-start;
   position: relative;
   width: 425px;
 }
 @media (max-width: 834px) {
-  footer .footer-header .right .button {
+  footer .footer-header .right .bottom {
     flex-direction: column;
     gap: 16px;
     width: 300px;
   }
 }
-footer .footer-header .right .button .enter-btn {
+footer .footer-header .right .bottom .enter-btn {
   display: flex;
   outline: none;
   padding: 16px 0px 16px 20px;
@@ -2150,11 +2150,11 @@ footer .footer-header .right .button .enter-btn {
   line-height: 140%; /* 22.4px */
 }
 @media (max-width: 834px) {
-  footer .footer-header .right .button .enter-btn {
+  footer .footer-header .right .bottom .enter-btn {
     width: 280px;
   }
 }
-footer .footer-header .right .button .letter-btn {
+footer .footer-header .right .bottom .letter-btn {
   display: flex;
   height: 54.4px;
   padding: 0px 50px;
@@ -2169,18 +2169,18 @@ footer .footer-header .right .button .letter-btn {
   right: 0px;
   cursor: pointer;
 }
-footer .footer-header .right .button .letter-btn:hover {
+footer .footer-header .right .bottom .letter-btn:hover {
   transform: scale(0.95);
   transition: all 0.3s ease;
 }
 @media (max-width: 834px) {
-  footer .footer-header .right .button .letter-btn {
+  footer .footer-header .right .bottom .letter-btn {
     width: 300px;
     position: relative;
     justify-content: center;
   }
 }
-footer .footer-header .right .button .letter-btn span {
+footer .footer-header .right .bottom .letter-btn span {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -3364,4 +3364,4 @@ footer .footer-line p {
   .browser-marketplace .detail-created .collection span {
     display: none;
   }
-}/*# sourceMappingURL=main.css.map */
+}
