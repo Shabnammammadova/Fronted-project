@@ -271,7 +271,6 @@
                         min-width: 100px;
                         position: relative;
                         z-index: 1;
-                        backdrop-filter: blur(5px);
                         @include for-size(tablet){
                             width: 80px;
                             height: 80px;

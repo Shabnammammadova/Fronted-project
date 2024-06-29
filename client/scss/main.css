@@ -754,8 +754,6 @@ body {
   min-width: 100px;
   position: relative;
   z-index: 1;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 @media (max-width: 1280px) {
   .categories-cards .bottom-side .cards .card .top img {
