@@ -92,4 +92,106 @@ input{
         }
 
     }
+
+     .detail-created{
+        display: flex;
+        width: 1050px;
+        @include for-size(tablet){
+            width: 680px;
+        }
+        @include for-size(phone){
+            width: 375px;
+        }
+        .created{
+            display: flex;
+            height: 60px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex: 1 0 0;
+            border-bottom: 2px solid $avatarnum;
+            @include for-size(phone){
+                padding: 0px 10px;
+            }
+            p{
+                color: $textcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+            span{
+                color:$textcolor;
+                font-family: "Space Mono";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+                display: flex;
+                padding: 5px 10px;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                background: $avatarnum;
+                @include for-size(tablet){
+                    font-size: 12px;
+                }
+                @include for-size(phone){
+                    display: none;
+                }
+            }
+        }
+        .collection{
+            display: flex;
+            height: 60px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex: 1 0 0;
+            @include for-size(phone){
+                padding: 0px 10px;
+            }
+            p{
+                color: $avatarnum;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+            span{
+                color:$textcolor;
+                font-family: "Space Mono";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+                display: flex;
+                padding: 5px 10px;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                background: $avatarbackground;
+                @include for-size(tablet){
+                    font-size: 12px;
+                }
+                @include for-size(phone){
+                    display: none;
+                }
+            }
+        }
+    }
 }
