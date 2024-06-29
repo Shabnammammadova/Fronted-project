@@ -516,3 +516,135 @@
         }
     }
 }
+
+
+
+
+// NFT cards section 
+
+
+.nft-cards{
+    display: flex;
+    padding: 80px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+         .top-side{
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            @include for-size(tablet){
+                width: 690px;
+                overflow-x: scroll;
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include for-size(phone){
+                grid-template-columns: repeat(1,1fr);
+                overflow-y: scroll;
+                gap: 20px;
+                width: 315px;
+            }
+            .card{
+                display: flex;
+                height: 469px;
+                flex-direction: column;
+                flex: 1 0 0;
+                &:hover{
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
+                .card-body{
+                    display: flex;
+                    padding: 20px 30px 25px 30px;
+                    flex-direction: column;
+                    gap: 25px;
+                    align-self: stretch;
+                    background: $avatarbackground;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                .card-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+                    align-self: stretch;
+                    p{
+                        color: $textcolor;
+                        font-family: "Work Sans";
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%; /* 30.8px */
+                        text-transform: capitalize;
+                    }
+                    span{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        color: $textcolor;
+                        font-family: "Space Mono";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                    }
+                }
+                .card-footer{
+                    display: flex;
+                    .left{
+                        display: flex;
+                        padding-right: 21px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                        flex: 1 0 0;
+                        p{
+                            color: $avatarnum;
+                            font-family: "Space Mono";
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 110%; /* 13.2px */
+                        }
+                        span{
+                            color: $textcolor;
+                            font-family: "Space Mono";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%; /* 22.4px */
+                        }
+                    }
+                    .right{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-end;
+                        gap: 8px;
+                        flex: 1 0 0;
+                        p{
+                            color: $avatarnum;
+                            font-family: "Space Mono";
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 110%; /* 13.2px */
+                        }
+                        span{
+                            color: $textcolor;
+                            font-family: "Space Mono";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%; /* 22.4px */
+                        }
+                    }
+                }
+            }
+            }
+        }
+    }
+}

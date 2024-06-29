@@ -86,20 +86,19 @@
     }
     .bottom-side{
         .cards{
-            display: flex;
-            // width: 1050px;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
             gap: 30px;
             @include for-size(tablet){
                 width: 690px;
                 overflow-x: scroll;
+                grid-template-columns: repeat(2,1fr);
             }
             @include for-size(phone){
-                flex-direction: column;
-                align-items: center;
                 overflow: hidden;
                 gap: 20px;
                 width: 315px;
+                grid-template-columns: repeat(1,1fr);
             }
             .card{
                 display: flex;
