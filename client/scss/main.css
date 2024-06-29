@@ -3012,6 +3012,8 @@ footer .footer-line p {
   align-items: center;
   gap: 30px;
   align-self: stretch;
+  background: #3B3B3B;
+  margin-bottom: 3px;
 }
 .nft-cards .top-side .cards {
   display: grid;
@@ -3131,4 +3133,116 @@ footer .footer-line p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+}
+
+.browser-marketplace {
+  display: flex;
+  padding: 80px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+@media (max-width: 1280px) {
+  .browser-marketplace {
+    padding: 60px 0px;
+  }
+}
+@media (max-width: 834px) {
+  .browser-marketplace {
+    padding: 40px 0px;
+  }
+}
+.browser-marketplace .browser-header {
+  display: flex;
+  width: 1050px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+@media (max-width: 1280px) {
+  .browser-marketplace .browser-header {
+    width: 834px;
+  }
+}
+@media (max-width: 834px) {
+  .browser-marketplace .browser-header {
+    width: 375px;
+    align-items: center;
+  }
+}
+.browser-marketplace .browser-header .head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.browser-marketplace .browser-header .head h1 {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 51px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 56.1px */
+  text-transform: capitalize;
+}
+@media (max-width: 1280px) {
+  .browser-marketplace .browser-header .head h1 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 834px) {
+  .browser-marketplace .browser-header .head h1 {
+    font-size: 28px;
+  }
+}
+.browser-marketplace .browser-header .head p {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 35.2px */
+}
+@media (max-width: 1280px) {
+  .browser-marketplace .browser-header .head p {
+    font-size: 16px;
+  }
+}
+.browser-marketplace .browser-header .search-input {
+  position: relative;
+}
+.browser-marketplace .browser-header .search-input input {
+  display: flex;
+  width: 1050px;
+  height: 60px;
+  padding: 12px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid #3B3B3B;
+  background-color: transparent;
+  color: #3B3B3B;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 1280px) {
+  .browser-marketplace .browser-header .search-input input {
+    width: 680px;
+  }
+}
+@media (max-width: 834px) {
+  .browser-marketplace .browser-header .search-input input {
+    width: 315px;
+  }
+}
+.browser-marketplace .browser-header .search-input img {
+  position: absolute;
+  right: 30px;
+  top: 35px;
 }/*# sourceMappingURL=main.css.map */

@@ -530,6 +530,8 @@
     align-items: center;
     gap: 30px;
     align-self: stretch;
+    background:$avatarbackground;
+    margin-bottom: 3px;
          .top-side{
         .cards{
             display: grid;
