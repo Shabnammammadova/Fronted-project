@@ -9,7 +9,9 @@ const creatorProfilVolume = document.querySelector(".profil-volume p");
 const creatorProfilNftSold = document.querySelector(".profil-nftsold p");
 const creatorProfilFollowers = document.querySelector(".profil-followers p");
 const creatorProfileBio = document.querySelector(".profil-bio p");
-const creatorChainId = document.querySelector(".copy-btn p")
+const creatorChainId = document.querySelector(".copy-btn p");
+const nftCards = document.querySelector(".cards.nft-cards");
+
 
 homelogo.addEventListener("click", () => {
   window.location.href = "../../pages/home/index.html";
@@ -48,7 +50,43 @@ async function fillCreatorData(id) {
   creatorProfilNftSold.textContent = `${product.nftSold}`;
   creatorProfilFollowers.textContent = `${product.followers}`;
   creatorProfileBio.textContent = `${product.bio}`;
-  creatorChainId.textContent = `${product.chainId}`
+  creatorChainId.textContent = `${product.chainId}`;
+
+   
+  product.nfts.forEach((nft) => {
+    const nftCardElement = document.querySelector(".cards.nft-cards");
+    nftCardElement.innerHTML += `
+  <div class="card">
+            <div class="card-header">
+              <img src="/${nft.imgPath}" alt="" />
+            </div>
+            <div class="card-body">
+              <div class="card-info">
+                <p>${nft.name}</p>
+                <span
+                  ><img
+                    src="../../../assets/images/Avatar 4.png"
+                    alt=""
+                  />MoonDancer</span
+                >
+              </div>
+              <div class="card-footer">
+                <div class="left">
+                  <p>Price</p>
+                  <span>${nft.price.value} ETH</span>
+                </div>
+                <div class="right">
+                  <p>Highest Bid</p>
+                  <span>${nft.highestBid.value} wETH</span>
+                </div>
+              </div>
+            </div>
+          </div> 
+  `;
+  });
+
 }
 
 fillCreatorData(id);
+
+
