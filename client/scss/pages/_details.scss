@@ -111,6 +111,7 @@
                     @include for-size(phone){
                         width: 315px;
                     }
+
                 }
                 .plus-btn{
                     display: flex;
@@ -329,6 +330,16 @@
                 border-radius: 20px;
                 background: $purple;
                 cursor: pointer;
+                position: relative;
+
+                // &:hover{
+                //     transform: scale(0.9);
+                //     transition: all 0.3s ease;
+                // }
+                input{
+                background-color: transparent;
+                outline: none;
+                border: transparent;
                 color: $textcolor;
                 text-align: center;
                 font-family: "Work Sans";
@@ -336,10 +347,11 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: 140%; /* 22.4px */
-                &:hover{
-                    transform: scale(0.9);
-                    transition: all 0.3s ease;
-                }
+                    }
+                    img{
+                        position: absolute;
+                        left: 0;
+                    }
             }
             .plus-btn{
                 display: flex;

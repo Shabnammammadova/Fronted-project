@@ -2791,6 +2791,12 @@ footer .footer-line p {
   border-radius: 20px;
   background: #A259FF;
   cursor: pointer;
+  position: relative;
+}
+.card-detail .detail-info .right .copy-btn input {
+  background-color: transparent;
+  outline: none;
+  border: transparent;
   color: #FFF;
   text-align: center;
   font-family: "Work Sans";
@@ -2799,9 +2805,9 @@ footer .footer-line p {
   font-weight: 600;
   line-height: 140%; /* 22.4px */
 }
-.card-detail .detail-info .right .copy-btn:hover {
-  transform: scale(0.9);
-  transition: all 0.3s ease;
+.card-detail .detail-info .right .copy-btn img {
+  position: absolute;
+  left: 0;
 }
 .card-detail .detail-info .right .plus-btn {
   display: flex;

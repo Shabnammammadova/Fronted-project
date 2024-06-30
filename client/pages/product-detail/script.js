@@ -9,8 +9,8 @@ const creatorProfilVolume = document.querySelector(".profil-volume p");
 const creatorProfilNftSold = document.querySelector(".profil-nftsold p");
 const creatorProfilFollowers = document.querySelector(".profil-followers p");
 const creatorProfileBio = document.querySelector(".profil-bio p");
-const creatorChainId = document.querySelector(".copy-btn p");
-
+const copyBtn = document.querySelector(".copy-btn");
+const creatorChainId = document.querySelector(".copy-btn input");
 
 homelogo.addEventListener("click", () => {
   window.location.href = "../../pages/home/index.html";
@@ -49,9 +49,8 @@ async function fillCreatorData(id) {
   creatorProfilNftSold.textContent = `${product.nftSold}`;
   creatorProfilFollowers.textContent = `${product.followers}`;
   creatorProfileBio.textContent = `${product.bio}`;
-  creatorChainId.textContent = `${product.chainId}`;
+  creatorChainId.value = `${product.chainId}`;
 
-   
   product.nfts.forEach((nft) => {
     const nftCardElement = document.querySelector(".cards.nft-cards");
     nftCardElement.innerHTML += `
@@ -83,9 +82,14 @@ async function fillCreatorData(id) {
           </div> 
   `;
   });
-
 }
 
 fillCreatorData(id);
 
-
+copyBtn.addEventListener("click", () => {
+  const copiedArea = document.createElement("input");
+  copiedArea.value = copyBtn.textContent;
+  copiedArea.select();
+  copiedArea.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copiedArea.value);
+});

@@ -58,26 +58,6 @@ async function fillCard(creators) {
   });
 }
 
-// async function fillCard(creators) {
-//   console.log(creators);
-//   creators.forEach((creator) => {
-//     const productCards = document.querySelector(".cards.creators");
-//     productCards.innerHTML += `
-//     <div class="card">
-//     <div class="card-head">
-//         <p>${creator.id}</p>
-//     </div>
-//     <div class="card-img">
-//         <img src="/${creator.profileImgPath}" alt="">
-//     </div>
-//     <div class="card-body">
-//         <h3>${creator.name}</h3>
-//         <p>Total Sales: <span>${creator.totalSale.value} ${creator.totalSale.currency}</span></p>
-//     </div>
-// </div>
-//     `;
-//   });
-// }
 
 // letterBtn.addEventListener("click", () => {
 //   regexEmail();
@@ -97,6 +77,7 @@ async function fillCard(creators) {
 //   } else if (EMAIL_REGEX.test(emailInputElement.value)) {
 //      Toastify({
 //        text: "Email is correct format",
+
 //        duration: 3000,
 //      }).showToast();
 //   }
