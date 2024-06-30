@@ -10,7 +10,6 @@ const creatorProfilNftSold = document.querySelector(".profil-nftsold p");
 const creatorProfilFollowers = document.querySelector(".profil-followers p");
 const creatorProfileBio = document.querySelector(".profil-bio p");
 const creatorChainId = document.querySelector(".copy-btn p");
-const nftCards = document.querySelector(".cards.nft-cards");
 
 
 homelogo.addEventListener("click", () => {
