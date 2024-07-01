@@ -171,7 +171,7 @@ setTimeout( ()=> {
   
       const beforeAnimationElement = card.querySelector('::before');
       if (beforeAnimationElement) {
-          beforeAnimationElement.style.background="none"
+          beforeAnimationElement.style.background="3b3b3b"
       }
 
   });
