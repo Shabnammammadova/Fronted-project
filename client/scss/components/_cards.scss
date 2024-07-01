@@ -95,7 +95,7 @@
         @include for-size(phone){
             grid-template-columns: repeat(1,1fr);
         }
-        .card{
+        .card {
             display: flex;
             padding: 20px;
             flex-direction: column;
@@ -106,10 +106,39 @@
             width: 240px;
             background: $avatarbackground;
             position: relative;
+
+            //skeleton  
+            background: #eee;
+            color: transparent;
+            position: relative;
+            overflow: hidden;
+            height: 240px;
             &:hover{
                 transform: scale(0.9);
                 transition: all 0.3s ease;
                 cursor: pointer;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0%;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-size: 40px 60px;
+                animation-name: gradient-animation;
+                background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+                animation-duration: 2s;
+                animation-iteration-count: infinite; 
+              }
+
+              @keyframes gradient-animation {
+                0% {
+                    background-position: -468px 0;
+                }
+                 100% {
+                    background-position: 468px 0;
+                }
             }
             @include for-size(tablet){
                 display: flex;
@@ -142,6 +171,10 @@
                 left: 20px;
                 border-radius: 20px;
                 background: $backgroundcolor;
+                //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                 @include for-size(tablet){
                     top: 15px;
                     left: 20px;
@@ -157,17 +190,22 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 140%; /* 22.4px */
+                    //skeleton 
+                    background:transparent;
+                    color: transparent;
+                    overflow: hidden;
 
                 }
             }
             .card-img{
                 img{
+                    display: none;
                     @include for-size(tablet){
                         border-radius: 100px;
                         width: 60px;
                         height: 60px;
                     }
-                    
+                 
                 }
                 
          
@@ -179,6 +217,7 @@
                 align-items: center;
                 gap: 5px;
                 align-self: stretch;
+                //skeleton
                 @include for-size(tablet){
                     align-items: flex-start;
                 }
@@ -191,6 +230,10 @@
                     font-weight: 600;
                     line-height: 140%; 
                     text-transform: capitalize;
+                    //skeleton
+                    background: #eee;
+                    color: transparent;
+                    overflow: hidden;
                 }
                 p{
                     color: $avatarnum;
@@ -200,6 +243,10 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 140%; 
+                    //skeleton 
+                    background: #eee;
+                    color: transparent;
+                    overflow: hidden;
                     span{
                         color: $textcolor;
                         font-family: "Space Mono";
@@ -207,13 +254,19 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 140%; 
+                         //skeleton 
+                    background: #eee;
+                    color: transparent;
+                    overflow: hidden;
+
                     }
                 }
             }
 
         }
     }
-}
+    }
+
 
 
 

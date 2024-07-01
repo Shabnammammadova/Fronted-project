@@ -132,3 +132,47 @@ function regexEmailFooter() {
   }
  emailbtnFooter.value = ""
 }
+
+
+
+//card skeleton
+
+setTimeout( ()=> {
+  const cards = document.querySelectorAll('.cards.creators .card');
+  cards.forEach(card => {
+      card.style.background = '#3b3b3b';
+
+      const img = card.querySelector('.card-img img');
+      if (img) {
+          img.style.display = 'block';
+      }
+      
+      const head = card.querySelector('.card-head');
+      if (head) {
+          head.style.background = '#2b2b2b';
+          head.style.color = ''; 
+      }
+
+      const p = card.querySelector('.card-head p');
+      if (p) {
+          p.style.color = '#858584'; 
+      }
+      const bodyPElement = card.querySelector(".card-body p");
+      if(bodyPElement){
+        bodyPElement.style.background = "transparent";
+        bodyPElement.style.color = "#858584";
+      }
+
+      const bodyElements = card.querySelectorAll('.card-body, .card-body h3, .card-body p span');
+      bodyElements.forEach(el => {
+          el.style.background = 'transparent';
+          el.style.color = '#fff'; 
+      });
+  
+      const beforeAnimationElement = card.querySelector('::before');
+      if (beforeAnimationElement) {
+          beforeAnimationElement.style.background="none"
+      }
+
+  });
+}, 3000); 
