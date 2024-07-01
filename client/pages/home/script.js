@@ -59,26 +59,37 @@ async function fillCard(creators) {
 }
 
 
-// letterBtn.addEventListener("click", () => {
-//   regexEmail();
-// });
+letterBtn.addEventListener("click", () => {
+  regexEmail();
+});
 
-// function regexEmail() {
-//   if (emailInputElement.value === "") {
-//      Toastify({
-//       text: "Email is required",
-//       duration: 3000,
-//      }).showToast();
-//   } else if (!EMAIL_REGEX.test(emailInputElement.value)) {
-//      Toastify({
-//        text: "Email is wrong format!",
-//        duration: 3000,
-//      }).showToast();
-//   } else if (EMAIL_REGEX.test(emailInputElement.value)) {
-//      Toastify({
-//        text: "Email is correct format",
-
-//        duration: 3000,
-//      }).showToast();
-//   }
-// }
+function regexEmail() {
+  if (emailInputElement.value === "") {
+     Toastify({
+      text: "Email is required",
+      duration: 3000,
+      close:true,
+      gravity: "bottom", 
+      positionLeft: false,
+     }).showToast();
+  } else if (!EMAIL_REGEX.test(emailInputElement.value)) {
+     Toastify({
+      text: "Email is wrong format!",
+      duration: 3000,
+      close:true,
+      backgroundColor: "red",
+      gravity: "bottom", 
+      positionLeft: false,
+     }).showToast();
+  } else if (EMAIL_REGEX.test(emailInputElement.value)) {
+     Toastify({
+      text: "Email is correct format",
+      duration: 3000,
+      close:true,
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      gravity: "bottom", 
+      positionLeft: false,
+     }).showToast();
+  }
+  emailInputElement.value = ""
+}

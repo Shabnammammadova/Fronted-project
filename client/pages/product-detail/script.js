@@ -92,4 +92,12 @@ copyBtn.addEventListener("click", () => {
   copiedArea.select();
   copiedArea.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copiedArea.value);
+  Toastify({
+    text: "Copy ChainId",
+    close:true,
+    gravity: "bottom", // `top` or `bottom`
+    positionLeft: false, 
+    duration: 3000
+    }).showToast();
+  
 });
