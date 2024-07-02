@@ -1,6 +1,6 @@
 const homelogo = document.querySelector(".logo");
 const signupBtn = document.querySelector(".signup-btn");
-const loginBtn = document.querySelector(".login-btn")
+const loginBtn = document.querySelector(".login-btn");
 const marketplace = document.querySelector(".marketplace");
 const letterBtn = document.querySelector(".letter-btn");
 const emailInputElement = document.querySelector(".enter-btn");

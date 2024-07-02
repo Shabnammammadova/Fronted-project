@@ -1337,13 +1337,11 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
 @media (max-width: 1280px) {
   .discover-nft .bottom-side .cards {
     width: 690px;
-    overflow-x: scroll;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 834px) {
   .discover-nft .bottom-side .cards {
-    overflow: hidden;
     gap: 20px;
     width: 315px;
     grid-template-columns: repeat(1, 1fr);
@@ -2492,7 +2490,7 @@ footer .footer-line p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
+  gap: 10px;
   align-self: stretch;
 }
 .login-section .right-side .bottom .inputs .login {
@@ -2535,10 +2533,6 @@ footer .footer-line p {
   font-style: normal;
   font-weight: 600;
   line-height: 140%; /* 22.4px */
-}
-.login-section .right-side .bottom .create-btn:hover {
-  transform: scale(0.9);
-  transition: all 0.3s ease;
 }
 
 .card-detail {
@@ -3165,14 +3159,12 @@ footer .footer-line p {
 @media (max-width: 1280px) {
   .nft-cards .top-side .cards {
     width: 690px;
-    overflow-x: scroll;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 834px) {
   .nft-cards .top-side .cards {
     grid-template-columns: repeat(1, 1fr);
-    overflow-y: scroll;
     gap: 20px;
     width: 315px;
   }

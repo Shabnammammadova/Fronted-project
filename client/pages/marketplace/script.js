@@ -1,5 +1,6 @@
 const homelogo = document.querySelector(".logo");
 const signupBtn = document.querySelector(".signup-btn");
+const loginBtn = document.querySelector(".login-btn");
 const marketplace = document.querySelector(".marketplace");
 const nftCards = document.querySelector(".cards.nft-cards");
 
@@ -15,6 +16,9 @@ homelogo.addEventListener("click", () => {
 
 signupBtn.addEventListener("click", () => {
   window.location.href = "../../pages/acountpage/index.html";
+});
+loginBtn.addEventListener("click" , ()=>{
+  window.location.href = "../../pages/login/index.html"
 });
 
 marketplace.addEventListener("click", () => {
