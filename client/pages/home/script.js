@@ -8,7 +8,7 @@ const footerLetterBtn = document.querySelector(".letter-btn.footer");
 const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
 const burgerNavbarlogo = document.getElementById("burgerIcon");
-const burgerMenu = document.getElementById("burgerMenu");
+const burgerMenu = document.querySelector(".navbar.burger-menu");
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -182,4 +182,10 @@ setTimeout( ()=> {
 //burger menu function 
 burgerNavbarlogo.addEventListener('click', ()=>{
   burgerMenu.classList.toggle('open');
+
 });
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>1280){
+    burgerMenu.classList.remove('open')
+  }
+})

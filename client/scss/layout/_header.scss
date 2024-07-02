@@ -145,11 +145,6 @@ header{
     &.open{
         display: flex;
         justify-content: flex-end;
-    }
-    // @include for-size(tablet){
-    //     display: flex;
-    //     justify-content: flex-end;
-    // }
     .list-navigation{
         width: fit-content;
         height: 100%;
@@ -229,5 +224,6 @@ header{
             }
         }
     }
+}
 }
 }

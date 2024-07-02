@@ -230,7 +230,7 @@ header .burger-menu.open {
   display: flex;
   justify-content: flex-end;
 }
-header .burger-menu .list-navigation {
+header .burger-menu.open .list-navigation {
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
@@ -241,7 +241,7 @@ header .burger-menu .list-navigation {
   padding: 0px 50px;
   background: #3B3B3B;
 }
-header .burger-menu .list-navigation li a {
+header .burger-menu.open .list-navigation li a {
   list-style-type: none;
   text-decoration: none;
   color: #FFF;
@@ -258,11 +258,11 @@ header .burger-menu .list-navigation li a {
   align-items: center;
   gap: 12px;
 }
-header .burger-menu .list-navigation li a:hover {
+header .burger-menu.open .list-navigation li a:hover {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
-header .burger-menu .list-navigation .login-btn {
+header .burger-menu.open .list-navigation .login-btn {
   display: flex;
   height: 60px;
   padding: 0px 30px;
@@ -282,11 +282,11 @@ header .burger-menu .list-navigation .login-btn {
   line-height: 140%;
   align-items: center;
 }
-header .burger-menu .list-navigation .login-btn:hover {
+header .burger-menu.open .list-navigation .login-btn:hover {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
-header .burger-menu .list-navigation .signup-btn {
+header .burger-menu.open .list-navigation .signup-btn {
   display: flex;
   height: 60px;
   padding: 0px 30px;
@@ -305,7 +305,7 @@ header .burger-menu .list-navigation .signup-btn {
   font-weight: 600;
   line-height: 140%;
 }
-header .burger-menu .list-navigation .signup-btn:hover {
+header .burger-menu.open .list-navigation .signup-btn:hover {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
