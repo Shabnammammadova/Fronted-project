@@ -142,12 +142,16 @@ header{
 }
 .burger-menu{
     display: none;
+    height: 0px;
+    transition: 0.8s;
+    overflow: hidden;
     &.open{
         display: flex;
         justify-content: flex-end;
+        height:auto;
     .list-navigation{
-        width: fit-content;
-        height: 100%;
+        // width: fit-content;
+        // height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

@@ -19,6 +19,10 @@
         .cosmos1{
             width: 610px;
             height: 691px;
+            @include for-size(tablet){
+                width: 397px;
+                height: 615px;
+            }
             @include for-size(phone){
                 width: 375px;
                 height: 232px;
@@ -33,6 +37,9 @@
         align-items: flex-start;
         gap: 40px;
         flex: 1 0 0;
+        @include for-size(tablet){
+            padding: 80px 0px;
+        }
         @include for-size(phone){
             width: 315px;
             padding: 30px 0px 40px 0px;
@@ -103,14 +110,6 @@
                     border: 1px solid $avatarnum;
                     background: $textcolor;
                     input{
-                        display: flex;
-                        // padding: 16px 20px;
-                        align-items: center;
-                        gap: 12px;
-                        align-self: stretch;
-                        border-radius: 20px;
-                        border: 1px solid $avatarnum;
-                        background: $textcolor;
                         outline: none;
                         border: none;
                         color:$backgroundcolor;

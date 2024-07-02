@@ -20,6 +20,21 @@ footerLetterBtn.addEventListener("click",()=>{
     regexEmailFooter();
 })
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function regexEmailFooter() {
       if (emailbtnFooter.value === "") {
          Toastify({
@@ -50,3 +65,5 @@ function regexEmailFooter() {
       }
      emailbtnFooter.value = ""
 }
+
+
