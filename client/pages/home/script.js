@@ -7,7 +7,8 @@ const emailInputElement = document.querySelector(".enter-btn");
 const footerLetterBtn = document.querySelector(".letter-btn.footer");
 const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
-
+const burgerNavbarlogo = document.getElementById("burgerIcon");
+const burgerMenu = document.getElementById("burgerMenu");
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -176,3 +177,9 @@ setTimeout( ()=> {
 
   });
 }, 3000); 
+
+
+//burger menu function 
+burgerNavbarlogo.addEventListener('click', ()=>{
+  burgerMenu.classList.toggle('open');
+});

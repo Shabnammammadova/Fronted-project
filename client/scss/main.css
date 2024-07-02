@@ -69,7 +69,7 @@ body {
   background-color: #2B2B2B;
 }
 
-.navbar {
+header .navbar {
   width: 100%;
   display: flex;
   padding: 20px 50px;
@@ -79,57 +79,59 @@ body {
   background: #2B2B2B;
 }
 @media (max-width: 1280px) {
-  .navbar {
+  header .navbar {
     padding: 15px 50px;
   }
 }
 @media (max-width: 834px) {
-  .navbar {
+  header .navbar {
     padding: 15px 30px;
   }
 }
-
-.logo {
+header .navbar .logo {
   display: flex;
   align-items: center;
   gap: 12px;
   cursor: pointer;
 }
 @media (max-width: 1280px) {
-  .logo {
+  header .navbar .logo {
     gap: 9px;
   }
 }
-.logo .nav-logoimg {
+header .navbar .logo .nav-logoimg {
   width: 32px;
   height: 32px;
   flex-shrink: 0;
 }
 @media (max-width: 1280px) {
-  .logo .nav-logoimg {
+  header .navbar .logo .nav-logoimg {
     width: 24px;
     height: 24px;
   }
 }
-.logo .nav-logoname {
+header .navbar .logo .nav-logoname {
   width: 199.414px;
   height: 19.8px;
   flex-shrink: 0;
 }
 @media (max-width: 1280px) {
-  .logo .nav-logoname {
+  header .navbar .logo .nav-logoname {
     width: 149.56px;
     height: 14.85px;
   }
 }
-
-.right-side .list-navigation {
+header .navbar .right-side {
+  display: flex;
+  gap: 10px;
+}
+header .navbar .right-side .list-navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
 }
-.right-side .list-navigation li a {
+header .navbar .right-side .list-navigation li a {
   list-style-type: none;
   text-decoration: none;
   color: #FFF;
@@ -147,15 +149,15 @@ body {
   gap: 12px;
 }
 @media (max-width: 1280px) {
-  .right-side .list-navigation li a {
+  header .navbar .right-side .list-navigation li a {
     display: none;
   }
 }
-.right-side .list-navigation li a:hover {
+header .navbar .right-side .list-navigation li a:hover {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
-.right-side .list-navigation .login-btn {
+header .navbar .right-side .list-navigation .login-btn {
   display: flex;
   height: 60px;
   padding: 0px 30px;
@@ -175,15 +177,15 @@ body {
   line-height: 140%;
 }
 @media (max-width: 1280px) {
-  .right-side .list-navigation .login-btn {
+  header .navbar .right-side .list-navigation .login-btn {
     display: none;
   }
 }
-.right-side .list-navigation .login-btn:hover {
+header .navbar .right-side .list-navigation .login-btn:hover {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
-.right-side .list-navigation .signup-btn {
+header .navbar .right-side .list-navigation .signup-btn {
   display: flex;
   height: 60px;
   padding: 0px 30px;
@@ -203,23 +205,109 @@ body {
   line-height: 140%;
 }
 @media (max-width: 1280px) {
-  .right-side .list-navigation .signup-btn {
+  header .navbar .right-side .list-navigation .signup-btn {
     display: none;
   }
 }
-.right-side .list-navigation .signup-btn:hover {
+header .navbar .right-side .list-navigation .signup-btn:hover {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
-.right-side .list-navigation .burgerimg {
+header .navbar .right-side .burgerimg {
   display: none;
   width: 24px;
   height: 24px;
 }
 @media (max-width: 1280px) {
-  .right-side .list-navigation .burgerimg {
+  header .navbar .right-side .burgerimg {
     display: inline;
   }
+}
+header .burger-menu {
+  display: none;
+}
+header .burger-menu.open {
+  display: flex;
+  justify-content: flex-end;
+}
+header .burger-menu .list-navigation {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px 50px;
+  background: #3B3B3B;
+}
+header .burger-menu .list-navigation li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  display: flex;
+  height: 46px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+header .burger-menu .list-navigation li a:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+header .burger-menu .list-navigation .login-btn {
+  display: flex;
+  height: 60px;
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: end;
+  gap: 12px;
+  border-radius: 20px;
+  border: transparent;
+  cursor: pointer;
+  background: #A259FF;
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  align-items: center;
+}
+header .burger-menu .list-navigation .login-btn:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+header .burger-menu .list-navigation .signup-btn {
+  display: flex;
+  height: 60px;
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  border: transparent;
+  cursor: pointer;
+  background: #A259FF;
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+header .burger-menu .list-navigation .signup-btn:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
 }
 
 .discover-art {
