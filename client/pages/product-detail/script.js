@@ -15,6 +15,8 @@ const creatorChainId = document.querySelector(".copy-btn input");
 const footerLetterBtn = document.querySelector(".letter-btn.footer");
 const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
+const loginBtn = document.querySelector(".login-btn");
+
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
@@ -30,6 +32,9 @@ marketplace.addEventListener("click", () => {
   window.location.href = "../../pages/marketplace/index.html";
 });
 
+loginBtn.addEventListener("click" , ()=>{
+  window.location.href = "../../pages/login/index.html"
+})
 const searchParamStr = window.location.search;
 const searchParam = new URLSearchParams(searchParamStr);
 const id = searchParam.get("id");
