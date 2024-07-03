@@ -91,7 +91,7 @@ function regexEmail() {
      }).showToast();
   } else if (EMAIL_REGEX.test(emailInputElement.value)) {
      Toastify({
-      text: "Email is correct format",
+      text: "Email sent",
       duration: 3000,
       close:true,
       backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -127,7 +127,7 @@ function regexEmailFooter() {
      }).showToast();
   } else if (EMAIL_REGEX.test(emailbtnFooter.value)) {
      Toastify({
-      text: "Email is correct format",
+      text: "Email sent",
       duration: 3000,
       close:true,
       backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -193,3 +193,17 @@ window.addEventListener('resize',()=>{
     burgerMenu.classList.remove('open')
   }
 })
+
+// function countDownTimer(){
+// const countTimerHours = document.getElementById("hours");
+// const countTimerMinutes = document.getElementById("minutes");
+// const countTimerSeconds = document.getElementById("seconds");
+
+// function updateCountTimer(){
+//   const now = new Date().getTime();
+//   const distance = 
+// }
+// }
+
+
+

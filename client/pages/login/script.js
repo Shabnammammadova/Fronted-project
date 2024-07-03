@@ -8,6 +8,13 @@ const emailInputElement = document.querySelector(".enter-btn");
 const footerLetterBtn = document.querySelector(".letter-btn.footer");
 const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
+const message = document.querySelectorAll(".message");
+const createBtn = document.querySelector(".create-btn");
+
+const userNameinput = document.getElementById("usernameInput");
+const emailInput = document.getElementById("emailInput");
+
+const passwordInput = document.getElementById("passwordInput");
 const burgerNavbarlogo = document.getElementById("burgerIcon");
 const burgerMenu = document.querySelector(".navbar.burger-menu");
 
@@ -56,7 +63,7 @@ function regexEmailFooter() {
          }).showToast();
       } else if (EMAIL_REGEX.test(emailbtnFooter.value)) {
          Toastify({
-          text: "Email is correct format",
+          text: "Email sent",
           duration: 3000,
           close:true,
           backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -67,3 +74,28 @@ function regexEmailFooter() {
      emailbtnFooter.value = ""
 }
     
+
+createBtn.addEventListener("click",()=>{
+  registerForm();
+})
+function registerForm(){
+  message.forEach(message =>{
+      message.textContent = ""
+  });
+  if(userNameinput.value === ""){
+      message[0].textContent = "*Required Field";
+      message[0].style.color = "red"
+  }
+  if(passwordInput.value === ""){
+      message[1].textContent = "*Required Field";
+      message[1].style.color = "red"
+  }
+
+  else{
+      Toastify({
+          text: "Login",
+          close:true,
+          duration: 3000
+          }).showToast();
+  }
+  }
