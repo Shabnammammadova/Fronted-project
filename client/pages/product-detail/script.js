@@ -60,7 +60,7 @@ async function fillCreatorData(id) {
   creatorProfilNftSold.textContent = `${product.nftSold}`;
   creatorProfilFollowers.textContent = `${product.followers}`;
   creatorProfileBio.textContent = `${product.bio}`;
-  creatorChainId.value = `${product.chainId}`;
+  creatorChainId.value = `${product.chainId.slice(0, 4)}....${product.chainId.slice(-4)}`
 
   product.nfts.forEach((nft) => {
     const nftCardElement = document.querySelector(".cards.nft-cards");

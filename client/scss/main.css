@@ -226,19 +226,19 @@ header .navbar .right-side .burgerimg {
 }
 header .burger-menu {
   display: none;
-  height: 0px;
-  padding-top: 0;
-  padding-bottom: 0;
   flex-direction: column;
   align-items: center;
   transition: 0.6s height, 0.6s padding;
-  overflow: hidden;
-  position: relative;
-  z-index: 30;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 1000;
+  background: #3B3B3B;
+  width: 100%;
+  padding: 20px 0;
 }
 header .burger-menu.open {
   display: flex;
-  height: 190px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -247,7 +247,6 @@ header .burger-menu.open .list-navigation {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #3B3B3B;
 }
 header .burger-menu.open .list-navigation li a {
   list-style-type: none;
@@ -890,6 +889,13 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
     align-items: flex-start;
     gap: 25px;
     align-self: stretch;
+    width: 150px;
+    height: 67px;
+  }
+}
+@media (max-width: 834px) {
+  .categories-cards .bottom-side .cards .card .bottom {
+    width: 148px;
   }
 }
 .categories-cards .bottom-side .cards .card .bottom p {
@@ -904,6 +910,7 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
 @media (max-width: 1280px) {
   .categories-cards .bottom-side .cards .card .bottom p {
     font-size: 16px;
+    width: 125px;
   }
 }
 .categories-cards .bottom-side .cards .card .top1 {

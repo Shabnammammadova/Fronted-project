@@ -143,26 +143,27 @@ header{
 }
 .burger-menu{
     display: none;
-    height: 0px;
-    padding-top: 0;
-    padding-bottom: 0;
     flex-direction: column;
     align-items: center;
     transition: 0.6s height, 0.6s padding;
-    overflow: hidden;
-    position: relative;
-    z-index: 30;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1000;
+    background:$avatarbackground;
+    width: 100%;
+    padding: 20px 0;
     &.open{
         display: flex;
-        height: 190px;
+        // height: 190px;
         padding-top: 16px;
         padding-bottom: 16px;
     .list-navigation{
         display: flex;
         align-items: center;
         justify-content: center;
+        // flex-direction: column;
         gap: 10px;
-        background: $avatarbackground;
         li a{
         list-style-type: none;
         text-decoration: none;
