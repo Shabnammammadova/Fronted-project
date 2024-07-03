@@ -215,6 +215,7 @@ header .navbar .right-side .list-navigation .signup-btn:hover {
 }
 header .navbar .right-side .burgerimg {
   display: none;
+  transition: 0.6s;
   width: 24px;
   height: 24px;
 }
@@ -226,20 +227,26 @@ header .navbar .right-side .burgerimg {
 header .burger-menu {
   display: none;
   height: 0px;
-  transition: 0.8s;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.6s height, 0.6s padding;
   overflow: hidden;
+  position: relative;
+  z-index: 30;
 }
 header .burger-menu.open {
   display: flex;
-  justify-content: flex-end;
-  height: auto;
+  height: 190px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 header .burger-menu.open .list-navigation {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 0px 50px;
   background: #3B3B3B;
 }
 header .burger-menu.open .list-navigation li a {
@@ -258,6 +265,16 @@ header .burger-menu.open .list-navigation li a {
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+@media (max-width: 1280px) {
+  header .burger-menu.open .list-navigation li a {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 834px) {
+  header .burger-menu.open .list-navigation li a {
+    padding: 0px 30px;
+  }
 }
 header .burger-menu.open .list-navigation li a:hover {
   transform: scale(0.9);

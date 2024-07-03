@@ -130,6 +130,7 @@ header{
 }
 .burgerimg{
     display: none;
+    transition: 0.6s;
     width: 24px;
     height: 24px;
     @include for-size(tablet){
@@ -143,20 +144,24 @@ header{
 .burger-menu{
     display: none;
     height: 0px;
-    transition: 0.8s;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.6s height, 0.6s padding;
     overflow: hidden;
+    position: relative;
+    z-index: 30;
     &.open{
         display: flex;
-        justify-content: flex-end;
-        height:auto;
+        height: 190px;
+        padding-top: 16px;
+        padding-bottom: 16px;
     .list-navigation{
-        // width: fit-content;
-        // height: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 10px;
-        padding: 0px 50px;
         background: $avatarbackground;
         li a{
         list-style-type: none;
@@ -174,6 +179,12 @@ header{
         justify-content: center;
         align-items: center;
         gap: 12px;
+        @include for-size(tablet){
+            padding: 0px 50px;
+        }
+        @include for-size(phone){
+            padding: 0px 30px;
+        }
         &:hover{
             transform: scale(0.9);
             transition: all 0.3s ease;
@@ -198,7 +209,6 @@ header{
             font-weight: 600;
             line-height: 140%; 
             align-items: center;
-            // padding: 0px 90px;
             &:hover{
                 transform: scale(0.9);
                 transition: all 0.3s ease;

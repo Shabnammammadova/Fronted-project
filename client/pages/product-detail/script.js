@@ -98,11 +98,9 @@ async function fillCreatorData(id) {
 fillCreatorData(id);
 
 copyBtn.addEventListener("click", () => {
-  const copiedArea = document.createElement("input");
-  copiedArea.value = copyBtn.textContent;
-  copiedArea.select();
-  copiedArea.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copiedArea.value);
+  creatorChainId.select();
+  creatorChainId.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(creatorChainId.value);
   Toastify({
     text: "Copy ChainId",
     close:true,
@@ -118,7 +116,7 @@ footerLetterBtn.addEventListener("click",()=>{
   regexEmailFooter();
   })
   
-  function regexEmailFooter() {
+function regexEmailFooter() {
     if (emailbtnFooter.value === "") {
        Toastify({
         text: "Email is required",
