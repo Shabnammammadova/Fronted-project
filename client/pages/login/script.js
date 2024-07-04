@@ -8,6 +8,9 @@ const emailInputElement = document.querySelector(".enter-btn");
 const footerLetterBtn = document.querySelector(".letter-btn.footer");
 const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
+const burgerNavbarlogo = document.getElementById("burgerIcon");
+const burgerMenu = document.querySelector(".navbar.burger-menu");
+
 const message = document.querySelectorAll(".message");
 const createBtn = document.querySelector(".create-btn");
 
@@ -15,8 +18,7 @@ const userNameinput = document.getElementById("usernameInput");
 const emailInput = document.getElementById("emailInput");
 
 const passwordInput = document.getElementById("passwordInput");
-const burgerNavbarlogo = document.getElementById("burgerIcon");
-const burgerMenu = document.querySelector(".navbar.burger-menu");
+
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -98,4 +100,15 @@ function registerForm(){
           duration: 3000
           }).showToast();
   }
+}
+
+
+burgerNavbarlogo.addEventListener('click', ()=>{
+  burgerMenu.classList.toggle('open');
+
+});
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>1280){
+    burgerMenu.classList.remove('open')
   }
+})

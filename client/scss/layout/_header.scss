@@ -160,9 +160,8 @@ header{
         padding-bottom: 16px;
     .list-navigation{
         display: flex;
-        align-items: center;
         justify-content: center;
-        // flex-direction: column;
+        flex-direction: column;
         gap: 10px;
         li a{
         list-style-type: none;

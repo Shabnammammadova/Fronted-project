@@ -12,6 +12,10 @@ const creatorProfileBio = document.querySelector(".profil-bio p");
 const copyBtn = document.querySelectorAll(".copy-btn");
 const creatorChainId = document.querySelector(".copy-btn input");
 
+const burgerNavbarlogo = document.getElementById("burgerIcon");
+const burgerMenu = document.querySelector(".navbar.burger-menu");
+
+
 const footerLetterBtn = document.querySelector(".letter-btn.footer");
 const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
@@ -148,4 +152,15 @@ function regexEmailFooter() {
        }).showToast();
     }
    emailbtnFooter.value = ""
+}
+
+
+burgerNavbarlogo.addEventListener('click', ()=>{
+  burgerMenu.classList.toggle('open');
+
+});
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>1280){
+    burgerMenu.classList.remove('open')
   }
+})

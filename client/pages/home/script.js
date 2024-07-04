@@ -194,16 +194,6 @@ window.addEventListener('resize',()=>{
   }
 })
 
-// function countDownTimer(){
-// const countTimerHours = document.getElementById("hours");
-// const countTimerMinutes = document.getElementById("minutes");
-// const countTimerSeconds = document.getElementById("seconds");
-
-// function updateCountTimer(){
-//   const now = new Date().getTime();
-//   const distance = 
-// }
-// }
 
 
 

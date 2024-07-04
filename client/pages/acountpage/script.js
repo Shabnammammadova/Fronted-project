@@ -6,6 +6,10 @@ const emailbtnFooter =document.querySelector(".enter-btn.footer");
 
 const createBtn = document.querySelector(".create-btn");
 
+const burgerNavbarlogo = document.getElementById("burgerIcon");
+const burgerMenu = document.querySelector(".navbar.burger-menu");
+
+
 const userNameinput = document.getElementById("usernameInput");
 const emailInput = document.getElementById("emailInput");
 const passwordInput = document.getElementById("passwordInput");
@@ -122,4 +126,12 @@ function regexEmailFooter() {
      emailbtnFooter.value = ""
 }
 
-
+burgerNavbarlogo.addEventListener('click', ()=>{
+    burgerMenu.classList.toggle('open');
+  
+  });
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>1280){
+      burgerMenu.classList.remove('open')
+    }
+  })

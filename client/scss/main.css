@@ -244,8 +244,8 @@ header .burger-menu.open {
 }
 header .burger-menu.open .list-navigation {
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 10px;
 }
 header .burger-menu.open .list-navigation li a {
@@ -1378,7 +1378,6 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
   flex: 1 0 0;
 }
 .discover-nft .bottom-side .cards .card:hover {
-  transform: scale(0.9);
   transition: all 0.3s ease;
   cursor: pointer;
 }
