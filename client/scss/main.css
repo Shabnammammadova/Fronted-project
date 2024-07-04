@@ -230,7 +230,7 @@ header .burger-menu {
   align-items: center;
   transition: 0.6s height, 0.6s padding;
   position: absolute;
-  top: 70px;
+  top: 50px;
   left: 0;
   z-index: 1000;
   background: #3B3B3B;
@@ -2624,7 +2624,7 @@ footer .footer-line p {
 }
 .card-detail .detail-info .left {
   display: flex;
-  width: 599px;
+  width: 690px;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
@@ -2672,6 +2672,34 @@ footer .footer-line p {
     width: 315px;
   }
 }
+.card-detail .detail-info .left .top-side .right .copy-btns {
+  display: flex;
+  width: 186px;
+  height: 60px;
+  padding: 0px 50px;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  background: #A259FF;
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  cursor: pointer;
+}
+@media (max-width: 834px) {
+  .card-detail .detail-info .left .top-side .right .copy-btns {
+    width: 315px;
+  }
+}
+.card-detail .detail-info .left .top-side .right .copy-btns input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 .card-detail .detail-info .left .top-side .right .copy-btn {
   display: flex;
   width: 186px;
@@ -2679,7 +2707,6 @@ footer .footer-line p {
   padding: 0px 50px;
   justify-content: center;
   align-items: center;
-  gap: 12px;
   border: none;
   border-radius: 20px;
   background: #A259FF;
@@ -3174,6 +3201,11 @@ footer .footer-line p {
   background: #3B3B3B;
   margin-bottom: 3px;
 }
+.nft-cards .top-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .nft-cards .top-side .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3290,6 +3322,24 @@ footer .footer-line p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+}
+.nft-cards .top-side .load-more-btn {
+  padding: 0px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 20px;
+  border: 2px solid #A259FF;
+  background: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  cursor: pointer;
 }
 
 .browser-marketplace {

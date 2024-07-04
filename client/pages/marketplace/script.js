@@ -10,8 +10,16 @@ const emailbtnFooter =document.querySelector(".enter-btn.footer");
 const burgerNavbarlogo = document.getElementById("burgerIcon");
 const burgerMenu = document.querySelector(".navbar.burger-menu");
 
+const loadMoreBtn = document.querySelector(".load-more-btn")
+
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
+
+let skip = 0;
+let pageSize = 6;
+let totalNFT = 18;
+
 
 homelogo.addEventListener("click", () => {
   window.location.href = "../../pages/home/index.html";
@@ -28,22 +36,25 @@ marketplace.addEventListener("click", () => {
   window.location.href = "../../pages/marketplace/index.html";
 });
 
-async function getCreatorFromApi() {
+async function getCreatorFromApi(skip,pageSize) {
   const response = await fetch(`${BASE_URL}/nfts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      pageSize: 6,
+      skip,
+      pageSize,
     }),
   });
   const product = await response.json();
-  return product;
+
+
+   return product;
 }
 
 async function fillCreatorData() {
-  const product = await getCreatorFromApi();
+  const product = await getCreatorFromApi(skip,pageSize);
   product.nfts.forEach((nft) => {
     const nftCardElement = document.querySelector(".cards.nft-cards");
     nftCardElement.innerHTML += `
@@ -75,11 +86,15 @@ async function fillCreatorData() {
           </div> 
   `;
   });
+  skip +=pageSize;
+  if(skip>=totalNFT){
+    loadMoreBtn.style.display = "none"
+  }
 }
 
+loadMoreBtn.addEventListener("click",fillCreatorData)
+
 fillCreatorData();
-
-
 
 footerLetterBtn.addEventListener("click",()=>{
   regexEmailFooter();
@@ -115,9 +130,6 @@ function regexEmailFooter() {
     }
    emailbtnFooter.value = ""
 }
-
-
-
 
 
 burgerNavbarlogo.addEventListener('click', ()=>{

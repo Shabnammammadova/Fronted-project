@@ -54,7 +54,7 @@
         gap: 100px;
         .left{
             display: flex;
-            width: 599px;
+            width: 690px;
             flex-direction: column;
             align-items: flex-start;
             gap: 30px;
@@ -89,6 +89,32 @@
                     flex-direction: column;
                     width: 315px;
                 }
+                .copy-btns{
+                        display: flex;
+                        width: 186px;
+                        height: 60px;
+                        padding: 0px 50px;
+                        align-items: center;
+                        border: none;
+                        border-radius: 20px;
+                        background: $purple;
+                        color: $textcolor;
+                        text-align: center;
+                        font-family: "Work Sans";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%; /* 22.4px */
+                        cursor: pointer;
+                        @include for-size(phone){
+                            width: 315px;
+                    }
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                }
                 .copy-btn{
                     display: flex;
                     width: 186px;
@@ -96,7 +122,6 @@
                     padding: 0px 50px;
                     justify-content: center;
                     align-items: center;
-                    gap: 12px;
                     border: none;
                     border-radius: 20px;
                     background: $purple;
@@ -545,6 +570,9 @@
     background:$avatarbackground;
     margin-bottom: 3px;
          .top-side{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         .cards{
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -659,6 +687,24 @@
                 }
             }
             }
+        }
+        .load-more-btn{
+            padding: 0px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            border-radius: 20px;
+            border: 2px solid $purple;
+            background: transparent;
+            color:$textcolor;
+            text-align: center;
+            font-family: "Work Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 22.4px */
+            cursor: pointer;
         }
     }
 }
