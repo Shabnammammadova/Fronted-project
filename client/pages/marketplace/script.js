@@ -12,6 +12,8 @@ const burgerMenu = document.querySelector(".navbar.burger-menu");
 
 const loadMoreBtn = document.querySelector(".load-more-btn")
 
+const ranking = document.querySelector(".rankings")
+
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
@@ -34,6 +36,10 @@ loginBtn.addEventListener("click" , ()=>{
 
 marketplace.addEventListener("click", () => {
   window.location.href = "../../pages/marketplace/index.html";
+});
+
+ranking.addEventListener("click",()=>{
+  window.location.href = "../../pages/ranking/index.html"
 });
 
 async function getCreatorFromApi(skip,pageSize) {
@@ -141,3 +147,4 @@ window.addEventListener('resize',()=>{
     burgerMenu.classList.remove('open')
   }
 })
+

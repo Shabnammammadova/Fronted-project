@@ -1,0 +1,203 @@
+.top-creators{
+    display: flex;
+    padding: 80px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    @include for-size(tablet){
+        padding: 40px 0px;
+    }
+    @include for-size(phone){
+        padding: 30px 0px;
+    }
+    .top{
+        display: flex;
+        width: 1050px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        @include for-size(tablet){
+            width: 690px;
+         }
+        @include for-size(phone){
+            width: 315px;
+            gap: 10px;
+        }
+        h1{
+            color: $textcolor;
+            font-family: "Work Sans";
+            font-size: 51px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 110%; /* 56.1px */
+            text-transform: capitalize;
+            @include for-size(tablet){
+                font-size: 38px;
+            }
+            @include for-size(phone){
+                font-size: 28px;
+            }
+        }
+        p{
+            color: $textcolor;
+            font-family: "Work Sans";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 35.2px */
+            @include for-size(tablet){
+                font-size: 16px;
+            }
+        }
+    }
+    .bottom{
+        display: flex;
+        padding: 0px 10px;
+        align-items: center;
+        gap: 10px;
+        width: 1050px;
+        @include for-size(tablet){
+            width:680px
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+        .creator-info1{
+            display: flex;
+            height: 60px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex: 1 0 0;
+            p{
+                color: $avatarnum;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                display: flex;
+                height: 60px;
+                padding: 0px 30px;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                flex: 1 0 0;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+            .today-info{
+                color: $textcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                border-bottom: 2px solid $avatarnum;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+        }
+        .creator-info1{
+            display: flex;
+            height: 60px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex: 1 0 0;
+            @include for-size(phone){
+                 display: none;
+            }
+            p{
+                color: $avatarnum;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                display: flex;
+                height: 60px;
+                padding: 0px 30px;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                flex: 1 0 0;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+            .today-info{
+                color: $textcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                border-bottom: 2px solid $avatarnum;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+        }
+        .creator-info2{
+            display: none;
+            height: 60px;
+            padding: 0px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex: 1 0 0;
+            @include for-size(phone){
+                display: flex;
+                width: 315px;
+            }
+            p{
+                color: $avatarnum;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                display: flex;
+                height: 60px;
+                padding: 0px 30px;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                flex: 1 0 0;
+                @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+            .today-info{
+                color: $textcolor;
+                text-align: center;
+                font-family: "Work Sans";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%; /* 30.8px */
+                text-transform: capitalize;
+                border-bottom: 2px solid $avatarnum;
+                  @include for-size(tablet){
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

@@ -88,7 +88,7 @@ else if(confirmInput.value !== passwordInput.value){
 }
 else{
     Toastify({
-        text: "Create Acount",
+        text: "Account create successfully",
         close:true,
         duration: 3000
         }).showToast();

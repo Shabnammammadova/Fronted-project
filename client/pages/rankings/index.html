@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Rankings</title>
     <link rel="icon" href="../../../assets/images/fox.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../scss/main.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -24,7 +24,7 @@
             <div class="right-side">
               <ul class="list-navigation">
                 <li><a href="../../pages/marketplace/index.html" class="marketplace">Marketplace</a></li>
-                <li><a href="../../pages/rankings/index.html">Rankings</a></li>
+                <li><a href="">Rankings</a></li>
                 <button class="login-btn">Login</button>
                 <button class="signup-btn"> <img src="../../../assets/icons/userbtn.svg" alt="">Sign Up</button>
               </ul>
@@ -41,33 +41,30 @@
               </ul>
          </nav>
     </header>
-<!-- Login section -->
-<section class="login-section">
-<div class="left-side">
-<img src="../../../assets/images/cosmonavts.png" alt="" class="cosmos1">
-</div>
-<div class="right-side">
-<div class="top">
-    <h1>Login</h1>
-    <p>Welcome! Enter your credentials to log in and access your account.</p>
-</div>
-<div class="bottom">
-    <div class="inputs">
-        <div class="login">
-            <img src="../../../assets/icons/User.svg" alt="">
-            <input type="text" placeholder="Username" id="usernameInput">
-        </div>
-        <small class="message" style="padding-left:15px;"></small>
-        <div class="login">
-            <img src="../../../assets/icons/LockKey.svg" alt="">
-            <input type="password" placeholder="Password" id="passwordInput">
-        </div>
-        <small class="message" style="padding-left:15px;"></small>
+
+<!-- Top creators -->
+<section class="top-creators">
+    <div class="top">
+        <h1>Top Creators</h1>
+        <p>Check out top ranking NFT artists on the NFT Marketplace.</p>
     </div>
-    <button class="create-btn">Login</button>
-</div>
-</div>
+    <div class="bottom">
+        <div class="creator-info1">
+            <p class="today-info">Today</p>
+            <p>This Week</p>
+            <p>This Month</p>
+            <p>All Time</p>
+        </div>
+        <div class="creator-info2">
+            <p class="today-info">1d</p>
+            <p>7d</p>
+            <p>30d</p>
+            <p>All Time</p>
+        </div>
+    </div>
+
 </section>
+
 
     <!-- Footer -->
 <footer>
@@ -112,6 +109,7 @@
         <input type="text" class="enter-btn footer" placeholder="Enter your email here">
         <button class="letter-btn footer"><span><img src="../../../assets/icons/letter.svg" alt="">Subscribe</span></button>
     </div>
+    <p id="errormessage" style="color: red;margin: 20px;"></p>
         </div>
     </div>
     <div class="footer-line">
@@ -119,5 +117,6 @@
         <p>Ⓒ NFT Market. Use this template freely.</p>
     </div>
 </footer>
+
 </body>
 </html>

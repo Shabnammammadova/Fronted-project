@@ -1,6 +1,7 @@
 const homelogo = document.querySelector(".logo");
 const signupBtn = document.querySelector(".signup-btn");
 const marketplace = document.querySelector(".marketplace");
+const ranking = document.querySelector(".rankings");
 const cardBody = document.querySelector(".card-body");
 const cardInfo = document.querySelector(".card-info");
 const creatorImg = document.querySelector(".card-info img");
@@ -38,6 +39,10 @@ signupBtn.addEventListener("click", () => {
 marketplace.addEventListener("click", () => {
   window.location.href = "../../pages/marketplace/index.html";
 });
+
+ranking.addEventListener("click",()=>{
+  window.location.href = "../../pages/ranking/index.html"
+})
 
 loginBtn.addEventListener("click" , ()=>{
   window.location.href = "../../pages/login/index.html"

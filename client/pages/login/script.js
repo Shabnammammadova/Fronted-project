@@ -19,6 +19,7 @@ const emailInput = document.getElementById("emailInput");
 
 const passwordInput = document.getElementById("passwordInput");
 
+const ranking = document.querySelector(".rankings");
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -37,6 +38,10 @@ signupBtn.addEventListener("click", () => {
 marketplace.addEventListener("click", () => {
   window.location.href = "../../pages/marketplace/index.html";
 });
+
+ranking.addEventListener("click",()=>{
+  window.location.href = "../../pages/ranking/index.html"
+})
 
 
 
@@ -95,9 +100,9 @@ function registerForm(){
 
   else{
       Toastify({
-          text: "Login",
+          text: "You are logged in",
           close:true,
-          duration: 3000
+          duration: 3000,
           }).showToast();
   }
 }
