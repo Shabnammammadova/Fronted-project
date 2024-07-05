@@ -20,7 +20,10 @@ const message = document.querySelectorAll(".message");
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-  
+
+const PASSWORD_REGEX =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
+
 homelogo.addEventListener("click",()=>{
     window.location.href = "../../pages/home/index.html"
 })
@@ -44,117 +47,113 @@ registerForm();
 })
 
 async function registerForm(){
+  let allInput = true
 message.forEach(message =>{
     message.textContent = ""
 });
 if(userNameinput.value === ""){
     message[0].textContent = "*Required Field";
-    message[0].style.color = "red"
+    message[0].style.color = "red";
+    allInput = false
 }
 else if(userNameinput.value.length < 3){
-    message[0].textContent = "Username must be at least 3 characters"
+    message[0].textContent = "Username must be at least 3 characters";
+    message[0].style.color = "red";
+    allInput = false
 }
 if(emailInput.value === ""){
     message[1].textContent = "*Required Field";
-    message[1].style.color = "red"
+    message[1].style.color = "red";
+    allInput = false
 }
 else if (!EMAIL_REGEX.test(emailInput.value)){
     message[1].textContent = "Email is wrong format";
-    message[1].style.color = "red"
+    message[1].style.color = "red";
+    allInput = false
 }
 if(passwordInput.value === ""){
     message[2].textContent = "*Required Field";
-    message[2].style.color = "red"
+    message[2].style.color = "red";
+    allInput = false
 }
-else if(passwordInput.value.search(/[a-z]/)<0){
-    message[2].textContent = "Your password must contain at least one letter."
-    message[2].style.color = "red"
-}
-else if(passwordInput.value.search(/[A-Z]/)<0){
-    message[2].textContent = "Your password must contain at least one upper letter."
-    message[2].style.color = "red"
-}
-else if(passwordInput.value.search(/[!#$%&?]/)<0){
-    message[2].textContent = "Your password must contain at least one special character."
-    message[2].style.color = "red"
+else if(!PASSWORD_REGEX.test( passwordInput.value)){
+    message[2].textContent = "Password is wrong format."
+    message[2].style.color = "red";
+    allInput = false
 }
 if(confirmInput.value === ""){
     message[3].textContent = "*Required Field";
-    message[3].style.color = "red"
+    message[3].style.color = "red";
+    allInput = false
 }
 else if(confirmInput.value !== passwordInput.value){
-    message[3].textContent = "Confirm password must match with password!";
-    message[3].style.color = "red"
+    message[4].textContent = "Confirm password must match with password!";
+    message[4].style.color = "red";
+    allInput = false
 }
-else{
-        Toastify({
-            text: "You are logged in",
-            close: true,
-            duration: 3000
-        }).showToast();
-
-
-} 
-
-}
-    
-/*
-app.post("/api/login", (req, res) => {
+if (allInput) {
   try {
-    const { username, password } = req.body;
+      const registerResponse = await fetch(`${BASE_URL}/register`, {
+          method: 'POST',
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              username: userNameinput.value,
+              email: emailInput.value,
+              password: passwordInput.value,
+          })
+      });
 
-    if (!username?.trim() || !password?.trim()) {
-      return res
-        .status(400)
-        .json({ error: "Fields 'username' and 'password' are required!" });
-    }
-
-    const user = users.find(
-      (user) => user.password === password && user.username === username
-    );
-
-    if (!user) {
-      return res
-        .status(400)
-        .json({ error: "User not found! Wrong email or password." });
-    }
-
-    res.status(200).json({ ...user, password: undefined });
+      const registerResult = await registerResponse.json();
+      if (registerResponse.ok) {
+          Toastify({
+              text: "Account created!",
+              close: true,
+              duration: 3000,
+              backgroundColor:"green"
+          }).showToast();
+      } else {
+          Toastify({
+              text: registerResult.error,
+              close: true,
+              duration: 3000,
+              backgroundColor: "red",
+          }).showToast();
+      }
   } catch (error) {
-    res.status(500).json({ error: `Internal Server Error! ${error}` });
+      Toastify({
+          text: "An error occurred.",
+          close: true,
+          duration: 3000,
+          backgroundColor: "red",
+      }).showToast();
   }
-});
-*/
+}
+}
+
+    
 
 function regexEmailFooter() {
-      if (emailbtnFooter.value === "") {
-         Toastify({
-          text: "Email is required",
-          duration: 3000,
-          close:true,
-          gravity: "bottom", 
-          positionLeft: false,
-         }).showToast();
-      } else if (!EMAIL_REGEX.test(emailbtnFooter.value)) {
-         Toastify({
-          text: "Email is wrong format!",
-          duration: 3000,
-          close:true,
-          backgroundColor: "red",
-          gravity: "bottom", 
-          positionLeft: false,
-         }).showToast();
-      } else if (EMAIL_REGEX.test(emailbtnFooter.value)) {
-         Toastify({
-          text: "Email sent",
-          duration: 3000,
-          close:true,
-          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-          gravity: "bottom", 
-          positionLeft: false,
-         }).showToast();
-      }
-     emailbtnFooter.value = ""
+  if (emailbtnFooter.value === "") {
+    showToast("Email is required", "blue");
+  } else if (!EMAIL_REGEX.test(emailbtnFooter.value)) {
+    showToast("Email is wrong format!", "red");
+  } else {
+    showToast("Email sent", "linear-gradient(to right, #00b09b, #96c93d)");
+  }
+  emailbtnFooter.value = "";
+}
+
+function showToast(message, bgColor) {
+  Toastify({
+    text: message,
+    duration: 3000,
+    close: true,
+    backgroundColor: bgColor,
+    gravity: "bottom",
+    positionLeft: false,
+  }).showToast();
 }
 
 burgerNavbarlogo.addEventListener('click', ()=>{

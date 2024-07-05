@@ -85,26 +85,59 @@ function regexEmailFooter() {
 createBtn.addEventListener("click",()=>{
   registerForm();
 })
-function registerForm(){
+async function registerForm(){
   message.forEach(message =>{
       message.textContent = ""
   });
+  let allInput = true
   if(userNameinput.value === ""){
       message[0].textContent = "*Required Field";
-      message[0].style.color = "red"
+      message[0].style.color = "red";
+      allInput = false
   }
   if(passwordInput.value === ""){
       message[1].textContent = "*Required Field";
-      message[1].style.color = "red"
+      message[1].style.color = "red";
+      allInput = false
   }
 
-  else{
-      Toastify({
-          text: "You are logged in",
-          close:true,
-          duration: 3000,
-          }).showToast();
-  }
+  if (allInput) {
+    try {
+        const loginResponse = await fetch(`${BASE_URL}/login`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username: userNameinput.value,
+                password: passwordInput.value,
+            })
+        });
+
+        const loginResult = await loginResponse.json();
+        if (loginResponse.ok) {
+            Toastify({
+                text: "You are logged in",
+                close: true,
+                duration: 3000,
+            }).showToast();
+        } else {
+            Toastify({
+                text: loginResult.error,
+                close: true,
+                duration: 3000,
+                backgroundColor: "red",
+            }).showToast();
+        }
+    } catch (error) {
+        Toastify({
+            text: "An error occurred.",
+            close: true,
+            duration: 3000,
+            backgroundColor: "red",
+        }).showToast();
+    }
+}
 }
 
 
