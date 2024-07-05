@@ -52,15 +52,18 @@
         align-items: center;
         padding: 40px 0;
         gap: 100px;
+        width: 1050px;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
         .left{
             display: flex;
-            width: 690px;
             flex-direction: column;
             align-items: flex-start;
             gap: 30px;
-            @include for-size(phone){
-                width: 375px;
-            }
             h1{
                 color: $textcolor;
                 font-family: "Work Sans";
@@ -77,9 +80,12 @@
                 }
             }
             .top-side{
-                display: none;
+                display: flex;
+                gap: 400px;
+                // display: none;
                  @include for-size(tablet){
-                    display: inline;
+                   flex-direction: column;
+                   gap: 20px;
                  }
             .right{
                 display: flex;
@@ -88,32 +94,6 @@
                 @include for-size(phone){
                     flex-direction: column;
                     width: 315px;
-                }
-                .copy-btns{
-                        display: flex;
-                        width: 186px;
-                        height: 60px;
-                        padding: 0px 50px;
-                        align-items: center;
-                        border: none;
-                        border-radius: 20px;
-                        background: $purple;
-                        color: $textcolor;
-                        text-align: center;
-                        font-family: "Work Sans";
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 140%; /* 22.4px */
-                        cursor: pointer;
-                        @include for-size(phone){
-                            width: 315px;
-                    }
-                    input{
-                        background-color: transparent;
-                        border: none;
-                        outline: none;
-                    }
                 }
                 .copy-btn{
                     display: flex;
@@ -136,7 +116,6 @@
                     @include for-size(phone){
                         width: 315px;
                     }
-
                 }
                 .plus-btn{
                     display: flex;
@@ -170,7 +149,7 @@
                 align-items: flex-start;
                 gap: 20px;
                 @include for-size(phone){
-                    width: 375px;
+                    width: 315px;
                 }
                 .profil-volume{
                     display: flex;
@@ -409,6 +388,7 @@
     .detail-created{
         display: flex;
         width: 1050px;
+
         @include for-size(tablet){
             width: 680px;
         }

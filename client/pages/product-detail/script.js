@@ -12,7 +12,7 @@ const creatorProfilFollowers = document.querySelector(".profil-followers p");
 const creatorProfileBio = document.querySelector(".profil-bio p");
 const copyBtn = document.querySelectorAll(".copy-btn");
 
-const copyBtns = document.querySelectorAll(".copy-btns");
+
 
 const creatorChainId = document.querySelector(".copy-btn input");
 
@@ -64,6 +64,10 @@ async function getCreatorFromApi(id) {
   return product;
 }
 
+function formatChainId(chainId) {
+  return `${chainId.slice(0, 6)}...${chainId.slice(4)}`;
+}
+
 async function fillCreatorData(id) {
   const product = await getCreatorFromApi(id);
   creatorImg.src = `/${product.profileImgPath}`;
@@ -73,6 +77,7 @@ async function fillCreatorData(id) {
   creatorProfilFollowers.textContent = `${product.followers}`;
   creatorProfileBio.textContent = `${product.bio}`;
   creatorChainId.value = `${product.chainId}`
+
 
   product.nfts.forEach((nft) => {
     const nftCardElement = document.querySelector(".cards.nft-cards");
@@ -125,21 +130,6 @@ copyBtn.forEach(copyBtn=>{
   });
 })
 
-copyBtns.forEach(copyBtns=>{
-  copyBtns.addEventListener("click", () => {
-    creatorChainId.select();
-    creatorChainId.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(creatorChainId.value);
-    Toastify({
-      text: "Copy ChainId",
-      close:true,
-      gravity: "bottom",
-      positionLeft: false, 
-      duration: 3000
-      }).showToast();
-    
-  });
-})
 
 
 footerLetterBtn.addEventListener("click",()=>{
