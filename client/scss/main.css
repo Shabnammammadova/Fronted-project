@@ -3795,6 +3795,12 @@ footer .footer-line p {
     font-size: 16px;
   }
 }
+@media (max-width: 834px) {
+  .top-creators .bottom .creator-info2 p {
+    width: 78.75px;
+    gap: 0;
+  }
+}
 .top-creators .bottom .creator-info2 .today-info {
   color: #FFF;
   text-align: center;
@@ -3809,5 +3815,283 @@ footer .footer-line p {
 @media (max-width: 1280px) {
   .top-creators .bottom .creator-info2 .today-info {
     font-size: 16px;
+  }
+}
+.top-creators .artist-about {
+  display: flex;
+  width: 1050px;
+  height: 46px;
+  padding: 12px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid #3B3B3B;
+}
+@media (max-width: 1280px) {
+  .top-creators .artist-about {
+    width: 690px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .artist-about {
+    width: 315px;
+  }
+}
+.top-creators .artist-about .artist {
+  display: flex;
+  width: 1050px;
+  padding: 0px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1280px) {
+  .top-creators .artist-about .artist {
+    width: 690px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .artist-about .artist {
+    width: 315px;
+  }
+}
+.top-creators .artist-about .artist .info {
+  display: flex;
+  width: 430px;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+@media (max-width: 834px) {
+  .top-creators .artist-about .artist .info {
+    gap: 10px;
+    width: 215px;
+  }
+}
+.top-creators .artist-about .artist .info p {
+  color: #858584;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.top-creators .artist-about .artist .info span {
+  color: #858584;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.top-creators .artist-about .artist .nft-about {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.top-creators .artist-about .artist .nft-about p {
+  width: 160px;
+  color: #858584;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 1280px) {
+  .top-creators .artist-about .artist .nft-about p {
+    width: 100px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .artist-about .artist .nft-about .p1 {
+    display: none;
+  }
+}
+@media (max-width: 1280px) {
+  .top-creators .artist-about .artist .nft-about .p2 {
+    display: none;
+  }
+}
+.top-creators .about-creators {
+  display: flex;
+  padding: 40px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+.top-creators .about-creators .creators {
+  display: flex;
+  width: 1050px;
+  padding: 12px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: #3B3B3B;
+  cursor: pointer;
+}
+.top-creators .about-creators .creators:hover {
+  box-shadow: rgba(153, 46, 240, 0.4) 0px 5px, rgba(140, 46, 240, 0.3) 0px 10px, rgba(140, 46, 240, 0.2) 0px 15px, rgba(146, 46, 240, 0.1) 0px 20px, rgba(133, 46, 240, 0.05) 0px 25px;
+}
+@media (max-width: 1280px) {
+  .top-creators .about-creators .creators {
+    width: 690px;
+    height: 60px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators {
+    width: 315px;
+    height: 50px;
+  }
+}
+.top-creators .about-creators .creators .creator-info {
+  display: flex;
+  width: 1050px;
+  padding: 0px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1280px) {
+  .top-creators .about-creators .creators .creator-info {
+    width: 690px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info {
+    width: 310px;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info .creator {
+    gap: 10px;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator p {
+  color: #858584;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  display: flex;
+  width: 30px;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #2B2B2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 1280px) {
+  .top-creators .about-creators .creators .creator-info .creator p {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info .creator p {
+    font-size: 12px;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator img {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+}
+@media (max-width: 1280px) {
+  .top-creators .about-creators .creators .creator-info .creator img {
+    width: 24px;
+    height: 24px;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator span {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info .creator span {
+    font-size: 12px;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator-nft {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.top-creators .about-creators .creators .creator-info .creator-nft p {
+  width: 160px;
+}
+@media (max-width: 1280px) {
+  .top-creators .about-creators .creators .creator-info .creator-nft p {
+    width: 100px;
+  }
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info .creator-nft p {
+    width: 80px;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator-nft .p-change {
+  color: #00AC4F;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info .creator-nft .p-change {
+    display: none;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator-nft .p-nft {
+  color: #FFF;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 1280px) {
+  .top-creators .about-creators .creators .creator-info .creator-nft .p-nft {
+    display: none;
+  }
+}
+.top-creators .about-creators .creators .creator-info .creator-nft .p-volume {
+  color: #FFF;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 834px) {
+  .top-creators .about-creators .creators .creator-info .creator-nft .p-volume {
+    font-size: 12px;
   }
 }

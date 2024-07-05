@@ -183,6 +183,10 @@
                 @include for-size(tablet){
                     font-size: 16px;
                 }
+                @include for-size(phone){
+                    width: 78.75px;
+                    gap: 0;
+                }
             }
             .today-info{
                 color: $textcolor;
@@ -197,6 +201,245 @@
                   @include for-size(tablet){
                     font-size: 16px;
                 }
+            }
+        }
+    }
+    .artist-about{
+        display: flex;
+        width: 1050px;
+        height: 46px;
+        padding: 12px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 20px;
+        border: 1px solid $avatarbackground;
+        @include for-size(tablet){
+            width: 690px;
+        }
+        @include for-size(phone){
+            width: 315px;
+        }
+        .artist{
+            display: flex;
+            width: 1050px;
+            padding: 0px 20px;
+            justify-content: space-between;
+            align-items: center;
+            @include for-size(tablet){
+                width: 690px;
+            }
+            @include for-size(phone){
+                width: 315px;
+            }
+        .info{
+            display: flex;
+            width: 430px;
+            align-items: center;
+            gap: 20px;
+            flex-shrink: 0;
+            @include for-size(phone){
+                gap: 10px;
+                width: 215px;
+            }
+            p{
+                color: $avatarnum;
+                font-family: "Space Mono";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+            }
+            span{
+                color: $avatarnum;
+                font-family: "Space Mono";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+            }
+        }
+        .nft-about{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            p{
+                width: 160px;
+                color: $avatarnum;
+                font-family: "Space Mono";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+                @include for-size(tablet){
+                    width: 100px;
+                }
+            }
+            .p1{
+                @include for-size(phone){
+                    display: none;
+                }
+            }
+            .p2{
+                @include for-size(tablet){
+                    display: none;
+                }
+            }
+        }
+        }
+    }
+    .about-creators{
+        display: flex;
+        padding: 40px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+        .creators{
+            display: flex;
+            width: 1050px;
+            padding: 12px 0px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            border-radius: 20px;
+            background: $avatarbackground;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(153, 46, 240, 0.4) 0px 5px, rgba(140, 46, 240, 0.3) 0px 10px, rgba(140, 46, 240, 0.2) 0px 15px, rgba(146, 46, 240, 0.1) 0px 20px, rgba(133, 46, 240, 0.05) 0px 25px;
+            }
+            @include for-size(tablet){
+                width: 690px;
+                height: 60px;
+            }
+            @include for-size(phone){
+                width: 315px;
+                height: 50px;
+            }
+            .creator-info{
+                display: flex;
+                width: 1050px;
+                padding: 0px 20px;
+                justify-content: space-between;
+                align-items: center;
+                @include for-size(tablet){
+                    width: 690px;
+                }
+                @include for-size(phone){
+                    width: 310px;
+                }
+                .creator{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    flex: 1 0 0;
+                    @include for-size(phone){
+                        gap: 10px;
+                    }
+                    p{
+                        color: $avatarnum;
+                        text-align: center;
+                        font-family: "Space Mono";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                        display: flex;
+                        width: 30px;
+                        align-items: flex-start;
+                        gap: 10px;
+                        flex-shrink: 0;
+                        border-radius: 20px;
+                        background:$backgroundcolor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        @include for-size(tablet){
+                            width: 24px;
+                            height: 24px;
+                        }
+                        @include for-size(phone){
+                            font-size: 12px;
+                        }
+                    }
+                    img{
+                        display: flex;
+                        width: 60px;
+                        height: 60px;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+                        border-radius: 100px;
+                        @include for-size(tablet){
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    span{
+                        color: $textcolor;
+                        font-family: "Work Sans";
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%; /* 30.8px */
+                        text-transform: capitalize;
+                        @include for-size(phone){
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .creator-nft{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 20px;
+                    p{
+                        width: 160px;
+                        @include for-size(tablet){
+                            width: 100px;
+                        }
+                        @include for-size(phone){
+                            width: 80px;
+                        }
+                    }
+                    .p-change{
+                        color: $green;
+                        font-family: "Space Mono";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                        @include for-size(phone){
+                            display: none;
+                        }
+                    }
+                    .p-nft{
+                        color: $textcolor;
+                        font-family: "Space Mono";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                        @include for-size(tablet){
+                            display: none;
+                        }
+                    }
+                    .p-volume{
+                        color: $textcolor;
+                        font-family: "Space Mono";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 22.4px */
+                        @include for-size(phone){
+                            font-size: 12px;
+                        }
+                    }
+                }
+
             }
         }
     }
