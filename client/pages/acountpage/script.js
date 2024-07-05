@@ -43,7 +43,7 @@ registerForm();
 
 })
 
-function registerForm(){
+async function registerForm(){
 message.forEach(message =>{
     message.textContent = ""
 });
@@ -87,13 +87,44 @@ else if(confirmInput.value !== passwordInput.value){
     message[3].style.color = "red"
 }
 else{
-    Toastify({
-        text: "Account create successfully",
-        close:true,
-        duration: 3000
+        Toastify({
+            text: "You are logged in",
+            close: true,
+            duration: 3000
         }).showToast();
+
+
+} 
+
 }
-}
+    
+/*
+app.post("/api/login", (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    if (!username?.trim() || !password?.trim()) {
+      return res
+        .status(400)
+        .json({ error: "Fields 'username' and 'password' are required!" });
+    }
+
+    const user = users.find(
+      (user) => user.password === password && user.username === username
+    );
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({ error: "User not found! Wrong email or password." });
+    }
+
+    res.status(200).json({ ...user, password: undefined });
+  } catch (error) {
+    res.status(500).json({ error: `Internal Server Error! ${error}` });
+  }
+});
+*/
 
 function regexEmailFooter() {
       if (emailbtnFooter.value === "") {

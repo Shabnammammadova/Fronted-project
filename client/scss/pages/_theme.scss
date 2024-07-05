@@ -251,11 +251,7 @@
                     flex-shrink: 0;
                     border-radius: 20px 20px 0px 0px;
                     background: rgba(255, 255, 255, 0.10);
-                    // background-size: contain;
-                    // background-repeat: no-repeat;
-                    // background-position: center;
-                    // filter: blur(7.5px) brightness(100%);
-                    // -webkit-filter: blur(7.55px) brightness(100%);
+                    position: relative;
                     z-index: 0;
                     @include for-size(tablet){
                         width: 150px;
@@ -265,6 +261,20 @@
                         width: 148px;
                         height: 142px;
                         gap: 10px;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px 20px 0px 0px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        filter: blur(5px);
+                        z-index: 1;
                     }
                     img{
                         width: 100px;
@@ -322,21 +332,21 @@
                         }
                     }
                 }
-                .top1{
+                .top1::before{
                     background-image: url(../../../assets/images/Image\ 1.png);
-                }.top2{
+                }.top2::before{
                     background-image: url(../../../assets/images/Image\ 2.png);
-                }.top3{
+                }.top3::before{
                     background-image: url(../../../assets/images/Image\ 3.png);
-                }.top4{
+                }.top4::before{
                     background-image: url(../../../assets/images/Image\ 4.png);
-                }.top5{
+                }.top5::before{
                     background-image: url(../../../assets/images/Image\ 5.png);
-                }.top6{
+                }.top6::before{
                     background-image: url(../../../assets/images/Image\ 6.png);
-                }.top7{
+                }.top7::before{
                     background-image: url(../../../assets/images/Image\ 7.png);
-                }.top8{
+                }.top8::before{
                     background-image: url(../../../assets/images/Image\ 8.png);
                 }
             }

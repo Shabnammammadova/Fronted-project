@@ -836,6 +836,7 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
   flex-shrink: 0;
   border-radius: 20px 20px 0px 0px;
   background: rgba(255, 255, 255, 0.1);
+  position: relative;
   z-index: 0;
 }
 @media (max-width: 1280px) {
@@ -850,6 +851,20 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
     height: 142px;
     gap: 10px;
   }
+}
+.categories-cards .bottom-side .cards .card .top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(5px);
+  z-index: 1;
 }
 .categories-cards .bottom-side .cards .card .top img {
   width: 100px;
@@ -913,28 +928,28 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
     width: 125px;
   }
 }
-.categories-cards .bottom-side .cards .card .top1 {
+.categories-cards .bottom-side .cards .card .top1::before {
   background-image: url(../../../assets/images/Image\ 1.png);
 }
-.categories-cards .bottom-side .cards .card .top2 {
+.categories-cards .bottom-side .cards .card .top2::before {
   background-image: url(../../../assets/images/Image\ 2.png);
 }
-.categories-cards .bottom-side .cards .card .top3 {
+.categories-cards .bottom-side .cards .card .top3::before {
   background-image: url(../../../assets/images/Image\ 3.png);
 }
-.categories-cards .bottom-side .cards .card .top4 {
+.categories-cards .bottom-side .cards .card .top4::before {
   background-image: url(../../../assets/images/Image\ 4.png);
 }
-.categories-cards .bottom-side .cards .card .top5 {
+.categories-cards .bottom-side .cards .card .top5::before {
   background-image: url(../../../assets/images/Image\ 5.png);
 }
-.categories-cards .bottom-side .cards .card .top6 {
+.categories-cards .bottom-side .cards .card .top6::before {
   background-image: url(../../../assets/images/Image\ 6.png);
 }
-.categories-cards .bottom-side .cards .card .top7 {
+.categories-cards .bottom-side .cards .card .top7::before {
   background-image: url(../../../assets/images/Image\ 7.png);
 }
-.categories-cards .bottom-side .cards .card .top8 {
+.categories-cards .bottom-side .cards .card .top8::before {
   background-image: url(../../../assets/images/Image\ 8.png);
 }
 
