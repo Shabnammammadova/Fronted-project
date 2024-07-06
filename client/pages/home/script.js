@@ -201,4 +201,37 @@ window.addEventListener('resize',()=>{
 
 
 
+function countDownTimer(){
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24
+
+
+        let today = new Date(),
+        dd = String (today.getDate()).padStart(2,"0")
+        mm = String (today.getMonth() + 1).padStart(2,"0"),
+        yyy = today.getFullYear(),
+        nextYear = yyy +1,
+        dayMonth = "07/13/",
+        birthday = dayMonth + yyy,
+
+        today = mm + "/" + dd + "/" + yyy;
+        if(today>birthday){
+          birthday = dayMonth +  nextYear;
+        }
+   
+        const countDown = new Date(birthday).getTime(),
+        x = setInterval(function timer(){
+          const now = new Date().getTime(),
+          distance =  countDown - now;
+
+          document.getElementById("days").innerText = Math.floor(distance/(day));
+          document.getElementById("hours").innerText = Math.floor(distance % (day)/(hour));
+          document.getElementById("minutes").innerText = Math .floor(distance % (hour) / (minute));
+          document.getElementById("seconds").innerText = Math.floor(distance % (minute) / (second))
+        
+   },1000)
+}
+countDownTimer()
 
