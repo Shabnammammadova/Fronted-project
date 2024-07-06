@@ -16,6 +16,7 @@ const copyBtn = document.querySelectorAll(".copy-btn");
 
 const creatorChainId = document.querySelector(".copy-btn input");
 
+
 const burgerNavbarlogo = document.getElementById("burgerIcon");
 const burgerMenu = document.querySelector(".navbar.burger-menu");
 
@@ -64,9 +65,8 @@ async function getCreatorFromApi(id) {
   return product;
 }
 
-function formatChainId(chainId) {
-  return `${chainId.slice(0, 6)}...${chainId.slice(4)}`;
-}
+
+
 
 async function fillCreatorData(id) {
   const product = await getCreatorFromApi(id);
@@ -76,10 +76,10 @@ async function fillCreatorData(id) {
   creatorProfilNftSold.textContent = `${product.nftSold}`;
   creatorProfilFollowers.textContent = `${product.followers}`;
   creatorProfileBio.textContent = `${product.bio}`;
-  creatorChainId.value = `${product.chainId}`
-
-
-  product.nfts.forEach((nft) => {
+  creatorChainId.value = `${product.chainId.slice(0,4)}...${product.chainId.slice(-4)}`;
+  
+  
+product.nfts.forEach((nft) => {
     const nftCardElement = document.querySelector(".cards.nft-cards");
     nftCardElement.innerHTML += `
   <div class="card">

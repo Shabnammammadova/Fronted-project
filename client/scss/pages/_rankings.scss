@@ -306,6 +306,38 @@
             border-radius: 20px;
             background: $avatarbackground;
             cursor: pointer;
+
+
+
+            //skeleton  
+              background: #eee;
+              color: transparent;
+              position: relative;
+              overflow: hidden;
+              
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0%;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-size: 40px 60px;
+                animation-name: gradient-animation;
+                //background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+                background:none;
+                animation-duration: 2s;
+                animation-iteration-count: infinite; 
+            }
+            @keyframes gradient-animation {
+                0% {
+                    background-position: -468px 0;
+                }
+                 100% {
+                    background-position: 468px 0;
+                }
+            }
             &:hover{
                 box-shadow: rgba(153, 46, 240, 0.4) 0px 5px, rgba(140, 46, 240, 0.3) 0px 10px, rgba(140, 46, 240, 0.2) 0px 15px, rgba(146, 46, 240, 0.1) 0px 20px, rgba(133, 46, 240, 0.05) 0px 25px;
             }
@@ -323,6 +355,8 @@
                 padding: 0px 20px;
                 justify-content: space-between;
                 align-items: center;
+
+              
                 @include for-size(tablet){
                     width: 690px;
                 }
@@ -334,6 +368,11 @@
                     align-items: center;
                     gap: 20px;
                     flex: 1 0 0;
+                    //skeleton
+                    background:transparent;
+                    color: transparent;
+                    overflow: hidden;
+                 
                     @include for-size(phone){
                         gap: 10px;
                     }
@@ -357,6 +396,11 @@
                         justify-content: center;
                         width: 30px;
                         height: 30px;
+
+                             //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                         @include for-size(tablet){
                             width: 24px;
                             height: 24px;
@@ -373,6 +417,12 @@
                         align-items: center;
                         flex-shrink: 0;
                         border-radius: 100px;
+
+                             //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
+                display: none;
                         @include for-size(tablet){
                             width: 24px;
                             height: 24px;
@@ -386,6 +436,11 @@
                         font-weight: 600;
                         line-height: 140%; /* 30.8px */
                         text-transform: capitalize;
+
+                              //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                         @include for-size(phone){
                             font-size: 12px;
                         }
@@ -412,6 +467,11 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 140%; /* 22.4px */
+
+                        //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                         @include for-size(phone){
                             display: none;
                         }
@@ -423,6 +483,11 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 140%; /* 22.4px */
+
+                         //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                         @include for-size(tablet){
                             display: none;
                         }
@@ -434,6 +499,11 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 140%; /* 22.4px */
+
+                         //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                         @include for-size(phone){
                             font-size: 12px;
                         }

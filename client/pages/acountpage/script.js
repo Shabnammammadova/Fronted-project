@@ -108,7 +108,7 @@ if (allInput) {
       const registerResult = await registerResponse.json();
       if (registerResponse.ok) {
           Toastify({
-              text: "Account created!",
+              text: "Account created succesfully!",
               close: true,
               duration: 3000,
               backgroundColor:"green"

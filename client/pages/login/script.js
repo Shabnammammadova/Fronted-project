@@ -117,10 +117,12 @@ async function registerForm(){
         const loginResult = await loginResponse.json();
         if (loginResponse.ok) {
             Toastify({
-                text: "You are logged in",
+                text: "Login succesfully!",
                 close: true,
-                duration: 3000,
+                duration: 5000,
+                backgroundColor:"green",
             }).showToast();
+            // window.location.href= "../../pages/home/index.html"
         } else {
             Toastify({
                 text: loginResult.error,

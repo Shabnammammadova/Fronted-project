@@ -201,15 +201,17 @@
             .card-img{
                 img{
                     display: none;
+
+                     //skeleton
+                background:transparent;
+                color: transparent;
+                overflow: hidden;
                     @include for-size(tablet){
                         border-radius: 100px;
                         width: 60px;
                         height: 60px;
                     }
-                 
                 }
-                
-         
             }
             .card-body{
                 display: flex;

@@ -1171,6 +1171,9 @@ header .burger-menu.open .list-navigation .signup-btn:hover {
 }
 .creator-cards .cards .card .card-img img {
   display: none;
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 1280px) {
   .creator-cards .cards .card .card-img img {
@@ -3926,6 +3929,31 @@ footer .footer-line p {
   border-radius: 20px;
   background: #3B3B3B;
   cursor: pointer;
+  background: #eee;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.top-creators .about-creators .creators::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 40px 60px;
+  animation-name: gradient-animation;
+  background: none;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
 }
 .top-creators .about-creators .creators:hover {
   box-shadow: rgba(153, 46, 240, 0.4) 0px 5px, rgba(140, 46, 240, 0.3) 0px 10px, rgba(140, 46, 240, 0.2) 0px 15px, rgba(146, 46, 240, 0.1) 0px 20px, rgba(133, 46, 240, 0.05) 0px 25px;
@@ -3964,6 +3992,9 @@ footer .footer-line p {
   align-items: center;
   gap: 20px;
   flex: 1 0 0;
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 834px) {
   .top-creators .about-creators .creators .creator-info .creator {
@@ -3990,6 +4021,9 @@ footer .footer-line p {
   justify-content: center;
   width: 30px;
   height: 30px;
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 1280px) {
   .top-creators .about-creators .creators .creator-info .creator p {
@@ -4010,6 +4044,10 @@ footer .footer-line p {
   align-items: center;
   flex-shrink: 0;
   border-radius: 100px;
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
+  display: none;
 }
 @media (max-width: 1280px) {
   .top-creators .about-creators .creators .creator-info .creator img {
@@ -4025,6 +4063,9 @@ footer .footer-line p {
   font-weight: 600;
   line-height: 140%; /* 30.8px */
   text-transform: capitalize;
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 834px) {
   .top-creators .about-creators .creators .creator-info .creator span {
@@ -4057,6 +4098,9 @@ footer .footer-line p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 834px) {
   .top-creators .about-creators .creators .creator-info .creator-nft .p-change {
@@ -4070,6 +4114,9 @@ footer .footer-line p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 1280px) {
   .top-creators .about-creators .creators .creator-info .creator-nft .p-nft {
@@ -4083,6 +4130,9 @@ footer .footer-line p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
 }
 @media (max-width: 834px) {
   .top-creators .about-creators .creators .creator-info .creator-nft .p-volume {
