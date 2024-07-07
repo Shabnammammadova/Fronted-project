@@ -76,3 +76,40 @@ async function getCreators() {
   
     });
 }
+
+
+
+//Rankings skeleton
+
+setTimeout(()=>{
+    const rankingCards = document.querySelectorAll('.about-creators .creators');
+    rankingCards.forEach(card =>{
+        card.style.background = '#3b3b3b';
+
+        const img = card.querySelector('.creator img')
+      if(img) { img.style.display = 'block';
+      }
+       const head = card.querySelector('.creator p')
+       if (head){
+        head.style.background = '#2b2b2b';
+        head.style.color = '#858584';
+       }
+       const span = card.querySelector('.creator span');
+       if(span){
+        span.style.color = "#fff"
+       }
+
+       const pChange = card.querySelector('.creator-nft .p-change');
+       if(pChange){
+        pChange.style.color = "#00AC4F"
+       }
+
+       const bodyElements = card.querySelectorAll('.creator-nft,  .creator-nft .p-nft, .creator-nft .p-volume');
+       bodyElements.forEach(el =>{
+        el.style.background = "transparent";
+        el.style.color = '#fff'
+       })
+        
+
+    })
+},3000)
