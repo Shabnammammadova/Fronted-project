@@ -23,6 +23,8 @@ let pageSize = 6;
 let totalNFT = 18;
 
 
+let count = 0;
+
 homelogo.addEventListener("click", () => {
   window.location.href = "../../pages/home/index.html";
 });
@@ -65,6 +67,7 @@ async function fillCreatorData() {
     const nftCardElement = document.querySelector(".cards.nft-cards");
     nftCardElement.innerHTML += `
   <div class="card">
+  <i class="fa-solid fa-heart" id="i"></i>
             <div class="card-header">
               <img src="/${nft.imgPath}" alt="" />
             </div>
@@ -92,11 +95,13 @@ async function fillCreatorData() {
           </div> 
   `;
   });
+cardAddCollection()
   skip +=pageSize;
   if(skip>=totalNFT){
     loadMoreBtn.style.display = "none"
   }
 }
+      
 
 loadMoreBtn.addEventListener("click",fillCreatorData)
 
@@ -104,7 +109,7 @@ fillCreatorData();
 
 footerLetterBtn.addEventListener("click",()=>{
   regexEmailFooter();
-  })
+})
   
 function regexEmailFooter() {
     if (emailbtnFooter.value === "") {
@@ -148,3 +153,34 @@ window.addEventListener('resize',()=>{
   }
 })
 
+
+
+function cardAddCollection(){
+  const heartIcon = document.querySelectorAll('#i');
+  heartIcon.forEach((hearticon)=>{
+    hearticon.addEventListener('click', ()=> {
+      hearticon.classList.toggle('active');
+    });
+  });
+  const collectionNumber = document.querySelector(".collection");
+  const created = document.querySelector(".created");
+
+  collectionNumber.addEventListener('click', () => {
+    if (!collectionNumber.classList.contains('active')) {
+      collectionNumber.classList.add('active');
+      created.classList.remove('active');
+      collectionNumber.style.borderBottom = "2px solid #858584";
+      created.style.borderBottom = "none";
+    }
+  });
+
+  created.addEventListener("click", () => {
+    if (!created.classList.contains('active')) {
+      created.classList.add('active');
+      collectionNumber.classList.remove('active');
+      created.style.borderBottom = "2px solid #858584";
+      collectionNumber.style.borderBottom = "none";
+    }
+  });
+
+}

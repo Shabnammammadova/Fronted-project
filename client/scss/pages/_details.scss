@@ -573,9 +573,25 @@
                 height: 469px;
                 flex-direction: column;
                 flex: 1 0 0;
+                position: relative;
+                #i{
+                    position: absolute;
+                    top:20px;
+                    right: 20px;
+                    font-size:20px;
+                    color: white;
+                    border: 1px solid #3d3d3d;
+                    border-radius: 50%;
+                    padding: 8px 8px;
+                    background-color: #3d3d3d;
+                    
+                }
+                #i.active{
+                    color: red;
+                }
                 &:hover{
-                    transform: scale(0.9);
-                    transition: all 0.3s ease;
+                    // transform: scale(0.9);
+                    // transition: all 0.3s ease;
                     cursor: pointer;
                 }
                 .card-body{

@@ -111,6 +111,7 @@ input{
             gap: 16px;
             flex: 1 0 0;
             border-bottom: 2px solid $avatarnum;
+            cursor: pointer;
             @include for-size(phone){
                 padding: 0px 10px;
             }
@@ -156,6 +157,7 @@ input{
             align-items: center;
             gap: 16px;
             flex: 1 0 0;
+            cursor: pointer;
             @include for-size(phone){
                 padding: 0px 10px;
             }
@@ -192,6 +194,10 @@ input{
                     display: none;
                 }
             }
+        }
+        .collection.active{
+            border-bottom: 2px solid $avatarnum;
+        
         }
     }
 }

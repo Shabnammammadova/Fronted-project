@@ -3225,10 +3225,23 @@ footer .footer-line p {
   height: 469px;
   flex-direction: column;
   flex: 1 0 0;
+  position: relative;
+}
+.nft-cards .top-side .cards .card #i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid #3d3d3d;
+  border-radius: 50%;
+  padding: 8px 8px;
+  background-color: #3d3d3d;
+}
+.nft-cards .top-side .cards .card #i.active {
+  color: red;
 }
 .nft-cards .top-side .cards .card:hover {
-  transform: scale(0.9);
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 .nft-cards .top-side .cards .card .card-body {
@@ -3472,6 +3485,7 @@ footer .footer-line p {
   gap: 16px;
   flex: 1 0 0;
   border-bottom: 2px solid #858584;
+  cursor: pointer;
 }
 @media (max-width: 834px) {
   .browser-marketplace .detail-created .created {
@@ -3525,6 +3539,7 @@ footer .footer-line p {
   align-items: center;
   gap: 16px;
   flex: 1 0 0;
+  cursor: pointer;
 }
 @media (max-width: 834px) {
   .browser-marketplace .detail-created .collection {
@@ -3569,6 +3584,9 @@ footer .footer-line p {
   .browser-marketplace .detail-created .collection span {
     display: none;
   }
+}
+.browser-marketplace .detail-created .collection.active {
+  border-bottom: 2px solid #858584;
 }
 
 .top-creators {
@@ -3933,6 +3951,7 @@ footer .footer-line p {
   color: transparent;
   position: relative;
   overflow: hidden;
+  height: 108px;
 }
 .top-creators .about-creators .creators::before {
   content: "";
