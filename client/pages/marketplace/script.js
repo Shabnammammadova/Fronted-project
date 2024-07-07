@@ -10,9 +10,10 @@ const emailbtnFooter =document.querySelector(".enter-btn.footer");
 const burgerNavbarlogo = document.getElementById("burgerIcon");
 const burgerMenu = document.querySelector(".navbar.burger-menu");
 
-const loadMoreBtn = document.querySelector(".load-more-btn")
+const loadMoreBtn = document.querySelector(".load-more-btn");
 
-const ranking = document.querySelector(".rankings")
+const ranking = document.querySelector(".rankings");
+const collectionSpanElement = document.querySelector(".collection span")
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -159,11 +160,19 @@ function cardAddCollection(){
   const heartIcon = document.querySelectorAll('#i');
   heartIcon.forEach((hearticon)=>{
     hearticon.addEventListener('click', ()=> {
-      hearticon.classList.toggle('active');
+      hearticon.classList.toggle('active')
+      if(hearticon.classList.contains('active')){
+     count ++
+      }
+      else{
+       count --
+      }
+      collectionSpanElement.textContent = count
     });
   });
   const collectionNumber = document.querySelector(".collection");
   const created = document.querySelector(".created");
+  
 
   collectionNumber.addEventListener('click', () => {
     if (!collectionNumber.classList.contains('active')) {
@@ -171,7 +180,10 @@ function cardAddCollection(){
       created.classList.remove('active');
       collectionNumber.style.borderBottom = "2px solid #858584";
       created.style.borderBottom = "none";
+      loadMoreBtn.style.display = "none"
+      selectCard();
     }
+    
   });
 
   created.addEventListener("click", () => {
@@ -180,7 +192,32 @@ function cardAddCollection(){
       collectionNumber.classList.remove('active');
       created.style.borderBottom = "2px solid #858584";
       collectionNumber.style.borderBottom = "none";
+      loadMoreBtn.style.display = "block"
+      showAllCards()
     }
   });
+ function selectCard(){
+  const cards = document.querySelectorAll(".cards.nft-cards .card");
+  cards.forEach((card)=>{
+    const hearticon = card.querySelector('#i');
+    
+    if (hearticon.classList.contains('active')) {
+      card.style.display = 'block';
+    } else if(hearticon.classList.remove('active')){
+      card.style.display = 'block'
+    }
+    
+    else {
+      card.style.display = 'none';
+    }
+    
+  })
+ }
 
+ function showAllCards() {
+  const cards = document.querySelectorAll('.cards.nft-cards .card');
+  cards.forEach((card) => {
+    card.style.display = 'block';
+  });
+}
 }

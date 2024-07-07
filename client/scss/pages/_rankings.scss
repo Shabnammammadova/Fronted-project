@@ -314,41 +314,27 @@
               color: transparent;
               position: relative;
               overflow: hidden;
-              height: 108px;
+             
               
 
             &::before{
                 content: "";
                 position: absolute;
-                left: 0%;
+                left: 0;
                 top: 0;
                 height: 100%;
                 width: 100%;
-                background-size: 40px 60px;
-                animation-name: gradient-animation;
-                //background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
-                background:none;
-                animation-duration: 2s;
-                animation-iteration-count: infinite; 
-            }
-            @keyframes gradient-animation {
-                0% {
-                    background-position: -468px 0;
-                }
-                 100% {
-                    background-position: 468px 0;
-                }
             }
             &:hover{
                 box-shadow: rgba(153, 46, 240, 0.4) 0px 5px, rgba(140, 46, 240, 0.3) 0px 10px, rgba(140, 46, 240, 0.2) 0px 15px, rgba(146, 46, 240, 0.1) 0px 20px, rgba(133, 46, 240, 0.05) 0px 25px;
             }
             @include for-size(tablet){
                 width: 690px;
-                height: 60px;
+                height: 70px;
             }
             @include for-size(phone){
                 width: 315px;
-                height: 50px;
+                height: 60px;
             }
             .creator-info{
                 display: flex;
