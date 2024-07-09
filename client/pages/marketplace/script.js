@@ -26,6 +26,7 @@ let totalNFT = 18;
 
 let count = 0;
 
+
 homelogo.addEventListener("click", () => {
   window.location.href = "../../pages/home/index.html";
 });
@@ -167,7 +168,7 @@ function cardAddCollection(){
       else{
        count --
       }
-      collectionSpanElement.textContent = count
+    collectionSpanElement.textContent = count
     });
   });
   const collectionNumber = document.querySelector(".collection");
@@ -183,7 +184,7 @@ function cardAddCollection(){
       loadMoreBtn.style.display = "none"
       selectCard();
     }
-    
+
   });
 
   created.addEventListener("click", () => {
@@ -194,19 +195,26 @@ function cardAddCollection(){
       collectionNumber.style.borderBottom = "none";
       loadMoreBtn.style.display = "block"
       showAllCards()
+
     }
   });
- function selectCard(){
+selectCard()
+showAllCards()
+
+
+
+}
+function selectCard(){
   const cards = document.querySelectorAll(".cards.nft-cards .card");
   cards.forEach((card)=>{
     const hearticon = card.querySelector('#i');
     
     if (hearticon.classList.contains('active')) {
       card.style.display = 'block';
-    } else if(hearticon.classList.remove('active')){
+    } 
+    else if(hearticon.classList.remove('active')){
       card.style.display = 'block'
     }
-    
     else {
       card.style.display = 'none';
     }
@@ -220,4 +228,8 @@ function cardAddCollection(){
     card.style.display = 'block';
   });
 }
+
+
+function saveLocalStorage(){
+  localStorage.setItem("card",cardAddCollection)
 }

@@ -78,6 +78,28 @@ async function fillCreatorData(id) {
   creatorProfileBio.textContent = `${product.bio}`;
   creatorChainId.value = `${product.chainId.slice(0,4)}...${product.chainId.slice(-4)}`;
   
+
+  copyBtn.forEach(copyBtn => {
+    copyBtn.addEventListener("click", () => {
+      const formatChainId = `${product.chainId.slice(0, 4)}...${product.chainId.slice(-4)}`;
+      
+      creatorChainId.value = formatChainId;
+  
+
+      creatorChainId.select();
+      creatorChainId.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(product.chainId);
+
+      creatorChainId.value = `${product.chainId.slice(0, 4)}...${product.chainId.slice(-4)}`;
+      Toastify({
+        text: "Copy ChainId",
+        close: true,
+        gravity: "bottom",
+        positionLeft: false,
+        duration: 3000
+      }).showToast();
+    });
+  });
   
 product.nfts.forEach((nft) => {
     const nftCardElement = document.querySelector(".cards.nft-cards");
@@ -114,21 +136,22 @@ product.nfts.forEach((nft) => {
 
 fillCreatorData(id);
 
-copyBtn.forEach(copyBtn=>{
-  copyBtn.addEventListener("click", () => {
-    creatorChainId.select();
-    creatorChainId.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(creatorChainId.value);
-    Toastify({
-      text: "Copy ChainId",
-      close:true,
-      gravity: "bottom",
-      positionLeft: false, 
-      duration: 3000
-      }).showToast();
+// copyBtn.forEach(copyBtn=>{
+//   copyBtn.addEventListener("click", () => {
+//     creatorChainId.select();
+//     creatorChainId.setSelectionRange(0, 99999);
+//     navigator.clipboard.writeText(creatorChainId.value);
+//     Toastify({
+//       text: "Copy ChainId",
+//       close:true,
+//       gravity: "bottom",
+//       positionLeft: false, 
+//       duration: 3000
+//       }).showToast();
     
-  });
-})
+//   });
+// })
+
 
 
 
