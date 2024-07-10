@@ -213,7 +213,7 @@ function countDownTimer(){
         mm = String (today.getMonth() + 1).padStart(2,"0"),
         yyy = today.getFullYear(),
         nextYear = yyy +1,
-        dayMonth = "07/13/",
+        dayMonth = "08/13/",
         birthday = dayMonth + yyy,
 
         today = mm + "/" + dd + "/" + yyy;
