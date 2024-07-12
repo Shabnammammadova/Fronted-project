@@ -160,15 +160,18 @@ window.addEventListener("resize", () => {
   }
 });
 
+
 function cardAddCollection() {
   const heartIcons = document.querySelectorAll('.cards.nft-cards .card #i');
+
+  count = parseInt(localStorage.getItem("count")) || cardSaveLocalStorage.filter(Boolean).length;
 
   heartIcons.forEach((heartIcon, index) => {
     heartIcon.addEventListener('click', () => {
       heartIcon.classList.toggle('active');
       if (heartIcon.classList.contains('active')) {
         count++;
-        cardSaveLocalStorage[index] = true; 
+        cardSaveLocalStorage[index] = true;
       } else {
         count--;
         cardSaveLocalStorage[index] = false;
@@ -181,7 +184,6 @@ function cardAddCollection() {
 
     if (cardSaveLocalStorage[index]) {
       heartIcon.classList.add('active');
-      count++;
     }
   });
 
